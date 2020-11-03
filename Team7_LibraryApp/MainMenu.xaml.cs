@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace Team7_LibraryApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainMenu : UserControl
     {
-        public MainWindow()
+        public MainMenu()
         {
             InitializeComponent();
         }
-
-        /// <summary>
-        /// To swap the screen
-        /// </summary>
-        /// <param name="element"></param>
-        public void SwapScreen(UIElement element)
-        {
-            Container.Child = element;
-        }
-
     }
 }

@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Team7_LibraryApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Border x:Name="Container">
+        <local:LogIn/>
+    </Border>
+
 </Window>
