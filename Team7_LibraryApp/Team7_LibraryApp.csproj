@@ -140,6 +140,7 @@
       <Project>{a5ac459d-6c0a-4d6e-ad65-ecb3e0fec3a7}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+    <Resource Include="Images\background.JPG" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

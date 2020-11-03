@@ -28,8 +28,20 @@ namespace Team7_LibraryApp
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
 
-            var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new MainMenu());
+            if(textBoxUsername.Text == "")
+            {
+
+                labelWarning.Content = "Please enter a Username";
+
+            }
+            else
+            {
+
+                var mainWindow = this.FindAncestor<MainWindow>();
+                mainWindow.SwapScreen(new MainMenu());
+
+            }
+
 
         }
     }

@@ -6,7 +6,41 @@
              xmlns:local="clr-namespace:Team7_LibraryApp"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/background.JPG"></ImageBrush>
+        </Grid.Background>
+
+        <DockPanel Grid.Row="0">
+
+            <DockPanel.Background>
+                <SolidColorBrush Color="AliceBlue" Opacity="1"/>
+            </DockPanel.Background>
             
+            <TextBlock VerticalAlignment="Center" Margin="10,0">Welcome Master Librarian!</TextBlock>
+            <Button VerticalAlignment="Center" HorizontalAlignment="Right" Content="LogOut" Margin="10,0"/>
+        </DockPanel>
+
+            <StackPanel Grid.Row="1" MaxWidth="300" Margin="20">
+
+            <StackPanel.Background>
+                <SolidColorBrush Color="AliceBlue" Opacity=".8"/>
+            </StackPanel.Background>
+                
+                <Label Content="Main Menu" HorizontalAlignment="Center" FontSize="24" Margin="10"/>
+                <Separator/>
+                <Button Content="Checkout Books" FontSize="18" Margin="10" MaxWidth="200"/>
+                <Button Content="Return Books" FontSize="18" Margin="10" MaxWidth="200"/>
+                <Button Content="Manage Library" FontSize="18" Margin="10" MaxWidth="200"/>
+                <Button Content="Reports" FontSize="18" Margin="10" MaxWidth="200"/>
+
+            </StackPanel>
+
     </Grid>
 </UserControl>
