@@ -60,6 +60,7 @@ BEGIN
 	CREATE TABLE T7Library.Book (
 		ISBN INT NOT NULL PRIMARY KEY,
 		Title NVARCHAR(256) NOT NULL,
+		Genre NVARCHAR(32),
 		Publisher NVARCHAR(32) NOT NULL,
 		[Year] INT NOT NULL
 	);
@@ -104,6 +105,7 @@ BEGIN
 		UserId INT NOT NULL FOREIGN KEY
 			REFERENCES T7Library.[User],
 		Email NVARCHAR(128) NOT NULL,
+		IsPrimary TINYINT NOT NULL,
 
 		UNIQUE (UserId, Email)
 	);
@@ -111,7 +113,7 @@ END;
 
 IF OBJECT_ID(N'T7Library.UserAddress') IS NULL
 BEGIN
-	CREATE TABLE T7Library.[Location] (
+	CREATE TABLE T7Library.UserAddress (
 		UserId INT NOT NULL PRIMARY KEY FOREIGN KEY
 			REFERENCES T7Library.[User],
 		StreedAddress NVARCHAR(128) NOT NULL,

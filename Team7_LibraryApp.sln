@@ -8,7 +8,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{A5AC459D-6C0A-4D6E-AD65-ECB3E0FEC3A7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionScripts", "SolutionScripts", "{7A7231BD-ADF2-4402-9382-D943F6A40A06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ResetSQL", "ResetSQL", "{BB5E3AEB-DEAC-4EA1-BB57-707B806A271F}"
 	ProjectSection(SolutionItems) = preProject
+		Load3DaysLeftProcedure.sql = Load3DaysLeftProcedure.sql
 		RebuildLibraryDatabase.sql = RebuildLibraryDatabase.sql
 	EndProjectSection
 EndProject
@@ -29,6 +32,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BB5E3AEB-DEAC-4EA1-BB57-707B806A271F} = {7A7231BD-ADF2-4402-9382-D943F6A40A06}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30E9B496-9727-4230-ABD6-397C848E4A46}
