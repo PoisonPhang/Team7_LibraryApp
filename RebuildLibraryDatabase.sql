@@ -37,7 +37,7 @@ BEGIN
 	CREATE TABLE T7Library.Librarian (
 		Username NVARCHAR(32) NOT NULL PRIMARY KEY,
 		PasswordHash NVARCHAR(128) NOT NULL,
-		FisrtName NVARCHAR(32) NOT NULL,
+		FirstName NVARCHAR(32) NOT NULL,
 		LastName NVARCHAR(32) NOT NULL,
 		StartDate DATE NOT NULL,
 		EndDate Date
@@ -48,7 +48,7 @@ IF OBJECT_ID(N'T7Library.Location') IS NULL
 BEGIN
 	CREATE TABLE T7Library.[Location] (
 		LocationId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
-		StreedAddress NVARCHAR(128) NOT NULL,
+		StreetAddress NVARCHAR(128) NOT NULL,
 		Unit NVARCHAR(16),
 		ZipCode INT NOT NULL,
 		StateCode NVARCHAR(2) NOT NULL
@@ -69,12 +69,12 @@ END;
 IF OBJECT_ID(N'T7Library.BookAuthor') IS NULL
 BEGIN
 	CREATE TABLE T7Library.BookAuthor (
-		FisrtName NVARCHAR(32) NOT NULL,
+		FirstName NVARCHAR(32) NOT NULL,
 		LastName NVARCHAR(32) NOT NULL,
 		ISBN INT NOT NULL FOREIGN KEY
 			REFERENCES T7Library.Book,
 
-		UNIQUE (FisrtName, LastName, ISBN)
+		UNIQUE (FirstName, LastName, ISBN)
 	);
 END;
 
@@ -94,7 +94,7 @@ IF OBJECT_ID(N'T7Library.User') IS NULL
 BEGIN
 	CREATE TABLE T7Library.[User] (
 		UserId INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
-		FisrtName NVARCHAR(32) NOT NULL,
+		FirstName NVARCHAR(32) NOT NULL,
 		LastName NVARCHAR(32) NOT NULL,
 	);
 END;
@@ -116,7 +116,7 @@ BEGIN
 	CREATE TABLE T7Library.UserAddress (
 		UserId INT NOT NULL PRIMARY KEY FOREIGN KEY
 			REFERENCES T7Library.[User],
-		StreedAddress NVARCHAR(128) NOT NULL,
+		StreetAddress NVARCHAR(128) NOT NULL,
 		Unit NVARCHAR(16),
 		ZipCode INT NOT NULL,
 		StateCode NVARCHAR(2) NOT NULL,
