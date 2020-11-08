@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Team7_LibraryApp"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="800" d:DesignWidth="1200">
 
     <Grid>
 
@@ -23,11 +23,11 @@
                 <SolidColorBrush Color="AliceBlue" Opacity="1"/>
             </DockPanel.Background>
             
-            <TextBlock VerticalAlignment="Center" Margin="10,0">Welcome Master Librarian!</TextBlock>
-            <Button VerticalAlignment="Center" HorizontalAlignment="Right" Content="LogOut" Margin="10,0"/>
+            <TextBlock VerticalAlignment="Center" Margin="10,0" FontSize="14">Welcome Master Librarian!</TextBlock>
+            <Button x:Name="buttonLogout" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="14" Content="Logout" Padding="10 0" Margin="10,0" Click="buttonLogout_Click" />
         </DockPanel>
 
-            <StackPanel Grid.Row="1" MaxWidth="300" Margin="20">
+            <StackPanel Grid.Row="1" MaxWidth="300" Margin="20" VerticalAlignment="Top" MinHeight="300">
 
             <StackPanel.Background>
                 <SolidColorBrush Color="AliceBlue" Opacity=".8"/>
@@ -38,7 +38,7 @@
                 <Button Content="Checkout Books" FontSize="18" Margin="10" MaxWidth="200"/>
                 <Button Content="Return Books" FontSize="18" Margin="10" MaxWidth="200"/>
                 <Button Content="Manage Library" FontSize="18" Margin="10" MaxWidth="200"/>
-                <Button Content="Reports" FontSize="18" Margin="10" MaxWidth="200"/>
+                <Button x:Name="buttonReports" Content="Reports" FontSize="18" Margin="10" MaxWidth="200" Click="buttonReports_Click"/>
 
             </StackPanel>
 

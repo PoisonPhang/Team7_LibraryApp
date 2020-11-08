@@ -16,16 +16,22 @@ using System.Windows.Shapes;
 namespace Team7_LibraryApp
 {
     /// <summary>
-    /// Interaction logic for MainMenu.xaml
+    /// Interaction logic for ReportFour.xaml
     /// </summary>
-    public partial class MainMenu : UserControl
+    public partial class ReportFour : UserControl
     {
-        public MainMenu()
+        public ReportFour()
         {
             InitializeComponent();
         }
 
+        private void buttonMainMenu_Click(object sender, RoutedEventArgs e)
+        {
 
+            var mainWindow = this.FindAncestor<MainWindow>();
+            mainWindow.SwapScreen(new MainMenu());
+
+        }
 
         private void buttonReports_Click(object sender, RoutedEventArgs e)
         {
@@ -35,16 +41,12 @@ namespace Team7_LibraryApp
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void buttonLogout_Click(object sender, RoutedEventArgs e)
         {
 
             var mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new LogIn());
+
         }
     }
 }
