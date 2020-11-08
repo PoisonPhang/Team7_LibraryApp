@@ -31,6 +31,18 @@ DROP TABLE IF EXISTS T7Library.BookAuthor;
 DROP TABLE IF EXISTS T7Library.Book;
 DROP TABLE IF EXISTS T7Library.[Location];
 DROP TABLE IF EXISTS T7Library.Librarian;
+DROP TABLE IF EXISTS T7Library.GenreCode;
+
+IF OBJECT_ID(N'T7Library.GenreCode') IS NULL
+BEGIN
+	CREATE TABLE T7Library.GenreCode (
+		Code INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
+		Genre NVARCHAR(32) NOT NULL
+	);
+END;
+
+INSERT T7Library.GenreCode(Genre)
+VALUES (N'All Genres');
 
 IF OBJECT_ID(N'T7Library.Librarian') IS NULL
 BEGIN
@@ -60,7 +72,8 @@ BEGIN
 	CREATE TABLE T7Library.Book (
 		ISBN INT NOT NULL PRIMARY KEY,
 		Title NVARCHAR(256) NOT NULL,
-		Genre NVARCHAR(32),
+		GenreCode INT NOT NULL FOREIGN KEY
+			REFERENCES T7Library.GenreCode,
 		Publisher NVARCHAR(32) NOT NULL,
 		[Year] INT NOT NULL
 	);
