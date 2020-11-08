@@ -1,6 +1,6 @@
 CREATE OR ALTER PROCEDURE T7Library.CheckoutsWith3DaysLeft
 AS
-SELECT U.FisrtName, U.LastName, UE.Email, B.Title as BookTitle, BA.FisrtName + N' ' + BA.LastName as BookAuthor, C.DueDate
+SELECT U.FirstName, U.LastName, UE.Email, B.Title as BookTitle, BA.FirstName + N' ' + BA.LastName as BookAuthor, C.DueDate
 FROM T7Library.Checkout C
 INNER JOIN T7Library.BookCopy BC ON C.BookId = BC.BookId
 INNER JOIN T7Library.Book B ON BC.ISBN = B.ISBN
