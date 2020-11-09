@@ -63,6 +63,7 @@ BEGIN
 		StreetAddress NVARCHAR(128) NOT NULL,
 		Unit NVARCHAR(16),
 		ZipCode INT NOT NULL,
+		CityName NVARCHAR(128) NOT NULL,
 		StateCode NVARCHAR(2) NOT NULL
 	);
 END;
@@ -132,6 +133,7 @@ BEGIN
 		StreetAddress NVARCHAR(128) NOT NULL,
 		Unit NVARCHAR(16),
 		ZipCode INT NOT NULL,
+		CityName NVARCHAR(128) NOT NULL,
 		StateCode NVARCHAR(2) NOT NULL,
 		IsPrimary TINYINT NOT NULL
 	);

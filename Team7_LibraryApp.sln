@@ -15,6 +15,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ResetSQL", "ResetSQL", "{BB
 		RebuildLibraryDatabase.sql = RebuildLibraryDatabase.sql
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReportQuery", "ReportQuery", "{14C14AC0-BC91-494A-825F-B6E13052041C}"
+	ProjectSection(SolutionItems) = preProject
+		GetOverdueCheckouts.sql = GetOverdueCheckouts.sql
+		RankBooksProcedure.sql = RankBooksProcedure.sql
+		RankLibraries.sql = RankLibraries.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModifyDataQuery", "ModifyDataQuery", "{9F9DF0D0-1F47-44CD-B9FD-FF164D554760}"
+	ProjectSection(SolutionItems) = preProject
+		AddBook.sql = AddBook.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +47,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BB5E3AEB-DEAC-4EA1-BB57-707B806A271F} = {7A7231BD-ADF2-4402-9382-D943F6A40A06}
+		{14C14AC0-BC91-494A-825F-B6E13052041C} = {7A7231BD-ADF2-4402-9382-D943F6A40A06}
+		{9F9DF0D0-1F47-44CD-B9FD-FF164D554760} = {7A7231BD-ADF2-4402-9382-D943F6A40A06}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30E9B496-9727-4230-ABD6-397C848E4A46}
