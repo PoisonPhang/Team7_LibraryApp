@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="Team7_LibraryApp.Return"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Team7_LibraryApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height= "70"/>
+            <RowDefinition/>
+            <RowDefinition Height= "140"/>
+
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/background.JPG" Opacity="1"></ImageBrush>
+
+        </Grid.Background>
+
+        <DockPanel Grid.Row="0">
+            <DockPanel.Background>
+                <SolidColorBrush Color="AliceBlue" Opacity="1"/>
+            </DockPanel.Background>
+            <Button x:Name="buttonMainMenu" VerticalAlignment="Center"  Content="Main Menu" Margin="10,0" FontSize="14" DockPanel.Dock="Left" Padding="10 0" Click="buttonMainMenu_Click"/>
+            <Button x:Name="buttonLogout" VerticalAlignment="Center"  Content="Logout" Margin="10,0" FontSize="14" DockPanel.Dock="Right" Padding="10 0" HorizontalAlignment="Right" MaxWidth="100" Click="buttonLogout_Click" />
+        </DockPanel>
+
+        <StackPanel Grid.Row="1"  Margin="0 5 0 5" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <StackPanel.Background>
+                <SolidColorBrush Color="AliceBlue" Opacity=".9"/>
+            </StackPanel.Background>
+
+            <Label FontSize="20" Margin="50 3 10 3">Filter:</Label>
+            <TextBox MinWidth="250" FontSize="20" Margin="0 3 10 3"></TextBox>
+            <ComboBox Margin="40 3 0 3" FontSize="20" MinWidth="250">
+                <ComboBoxItem>Name</ComboBoxItem>
+                <ComboBoxItem>Book ID</ComboBoxItem>
+            </ComboBox>
+            <Button Margin="40 5 50 5" MinWidth="200" Content="Filter" FontSize="20" Padding="10 0"/>
+        </StackPanel>
+
+        <ListView x:Name="listViewReportOne" Margin="50 0 50 0" FontSize="18" Grid.Row="2">
+            <ListView.View>
+                <GridView>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+        <StackPanel Grid.Row="3"  Margin="40" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <StackPanel.Background>
+                <SolidColorBrush Color="AliceBlue"  Opacity="1"/>
+            </StackPanel.Background>
+
+            <Label FontSize="20" Margin="50 10 10 10">Book ID:</Label>
+            <TextBox MinWidth="250" FontSize="20" Margin="0 10 10 10"></TextBox>
+            <Button Margin="40 10 50 10" MinWidth="200" Content="Return" FontSize="20" Padding="10 0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

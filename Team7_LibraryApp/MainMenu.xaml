@@ -27,18 +27,18 @@
             <Button x:Name="buttonLogout" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="14" Content="Logout" Padding="10 0" Margin="10,0" Click="buttonLogout_Click" />
         </DockPanel>
 
-            <StackPanel Grid.Row="1" MaxWidth="300" Margin="20" VerticalAlignment="Top" MinHeight="300">
+            <StackPanel Grid.Row="1" MaxWidth="450" Margin="60" VerticalAlignment="Top" MinHeight="500">
 
             <StackPanel.Background>
                 <SolidColorBrush Color="AliceBlue" Opacity=".8"/>
             </StackPanel.Background>
                 
-                <Label Content="Main Menu" HorizontalAlignment="Center" FontSize="24" Margin="10"/>
+                <Label Content="Main Menu" HorizontalAlignment="Center" FontSize="34" Margin="20"/>
                 <Separator/>
-                <Button Content="Checkout Books" FontSize="18" Margin="10" MaxWidth="200"/>
-                <Button Content="Return Books" FontSize="18" Margin="10" MaxWidth="200"/>
-                <Button Content="Manage Library" FontSize="18" Margin="10" MaxWidth="200"/>
-                <Button x:Name="buttonReports" Content="Reports" FontSize="18" Margin="10" MaxWidth="200" Click="buttonReports_Click"/>
+                <Button x:Name="buttonCheckout" Content="Checkout Books" FontSize="28" Margin="20" MaxWidth="300" Click="buttonCheckout_Click"/>
+                <Button x:Name="buttonReturn" Content="Return Books" FontSize="28" Margin="20" MaxWidth="300" Click="buttonReturn_Click"/>
+                <Button Content="Manage Library" FontSize="28" Margin="20" MaxWidth="300"/>
+                <Button x:Name="buttonReports" Content="Reports" FontSize="28" Margin="20" MaxWidth="300" Click="buttonReports_Click"/>
 
             </StackPanel>
 

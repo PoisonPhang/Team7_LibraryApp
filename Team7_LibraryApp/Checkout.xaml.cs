@@ -16,47 +16,25 @@ using System.Windows.Shapes;
 namespace Team7_LibraryApp
 {
     /// <summary>
-    /// Interaction logic for MainMenu.xaml
+    /// Interaction logic for Checkout.xaml
     /// </summary>
-    public partial class MainMenu : UserControl
+    public partial class Checkout : UserControl
     {
-        public MainMenu()
+        public Checkout()
         {
             InitializeComponent();
         }
 
-
-
-        private void buttonReports_Click(object sender, RoutedEventArgs e)
+        private void buttonMainMenu_Click(object sender, RoutedEventArgs e)
         {
-
             var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new Reports());
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
+            mainWindow.SwapScreen(new MainMenu());
         }
 
         private void buttonLogout_Click(object sender, RoutedEventArgs e)
         {
-
             var mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new LogIn());
-        }
-
-        private void buttonCheckout_Click(object sender, RoutedEventArgs e)
-        {
-            var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new Checkout());
-        }
-
-        private void buttonReturn_Click(object sender, RoutedEventArgs e)
-        {
-            var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new Return());
         }
     }
 }
