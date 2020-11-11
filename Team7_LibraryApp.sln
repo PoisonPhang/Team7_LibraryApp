@@ -7,28 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Team7_LibraryApp", "Team7_L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{A5AC459D-6C0A-4D6E-AD65-ECB3E0FEC3A7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionScripts", "SolutionScripts", "{7A7231BD-ADF2-4402-9382-D943F6A40A06}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ResetSQL", "ResetSQL", "{BB5E3AEB-DEAC-4EA1-BB57-707B806A271F}"
-	ProjectSection(SolutionItems) = preProject
-		RebuildLibraryDatabase.sql = RebuildLibraryDatabase.sql
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataRetrieval", "DataRetrieval", "{14C14AC0-BC91-494A-825F-B6E13052041C}"
-	ProjectSection(SolutionItems) = preProject
-		GetOverdueCheckouts.sql = GetOverdueCheckouts.sql
-		Load3DaysLeftProcedure.sql = Load3DaysLeftProcedure.sql
-		RankBooksProcedure.sql = RankBooksProcedure.sql
-		RankLibraries.sql = RankLibraries.sql
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataModification", "DataModification", "{9F9DF0D0-1F47-44CD-B9FD-FF164D554760}"
-	ProjectSection(SolutionItems) = preProject
-		AddBook.sql = AddBook.sql
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Procedures", "Procedures", "{3C2F2C98-DC8F-4285-9C30-85FB20561130}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,12 +24,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{BB5E3AEB-DEAC-4EA1-BB57-707B806A271F} = {7A7231BD-ADF2-4402-9382-D943F6A40A06}
-		{14C14AC0-BC91-494A-825F-B6E13052041C} = {3C2F2C98-DC8F-4285-9C30-85FB20561130}
-		{9F9DF0D0-1F47-44CD-B9FD-FF164D554760} = {3C2F2C98-DC8F-4285-9C30-85FB20561130}
-		{3C2F2C98-DC8F-4285-9C30-85FB20561130} = {7A7231BD-ADF2-4402-9382-D943F6A40A06}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30E9B496-9727-4230-ABD6-397C848E4A46}
