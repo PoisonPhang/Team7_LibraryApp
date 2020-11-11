@@ -1,7 +1,20 @@
-CREATE OR ALTER PROCEDURE T7Library.GetOverduePenalties
+CREATE OR ALTER PROCEDURE T7Library.ReturnBook
+	@BookId INT,
+	@LocationId INT
 AS
-SELECT BC.BookId,
-	B.ISBN,
+
+DECLARE @RtrnDate DATE = SYSDATETIME();
+
+UPDATE T7Library.Checkout
+SET ReturnDate = @RtrnDate
+WHERE BookId = @BookId AND ReturnDate IS NULL;
+
+IF ((SELECT BC.LocationId FROM T7Library.BookCopy BC WHERE BC.BookId = @BookId) = @LocationId)
+BEGIN
+EXEC T7Library.MoveCopy @BookId = @BookId, @LocationId = @LocationId
+END;
+
+SELECT B.ISBN,
 	B.Title,
 	BA.FirstName + N' ' + BA.LastName AS Author,
 	C.DueDate,
@@ -15,4 +28,4 @@ FROM T7Library.Checkout C
 INNER JOIN T7Library.BookCopy BC ON C.BookId = BC.BookId
 INNER JOIN T7Library.Book B ON BC.ISBN = B.ISBN
 INNER JOIN T7Library.BookAuthor BA ON B.ISBN = BA.ISBN
-WHERE DATEDIFF(DAY, C.DueDate, SYSDATETIME()) > 0
+WHERE DATEDIFF(DAY, C.DueDate, C.ReturnDate) > 0 AND C.BookId = @BookId AND C.ReturnDate = @RtrnDate;
