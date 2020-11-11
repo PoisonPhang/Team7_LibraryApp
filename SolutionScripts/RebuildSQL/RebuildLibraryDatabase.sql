@@ -100,7 +100,8 @@ BEGIN
 			REFERENCES T7Library.Book,
 		LocationId INT NOT NULL FOREIGN KEY
 			REFERENCES T7Library.[Location],
-		IsOutOfService TINYINT NOT NULL
+		IsCheckedOut TINYINT NOT NULL DEFAULT 0,
+		IsOutOfService TINYINT NOT NULL DEFAULT 0
 	);
 END;
 
