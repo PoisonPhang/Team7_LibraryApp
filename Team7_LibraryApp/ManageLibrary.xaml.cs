@@ -16,50 +16,49 @@ using System.Windows.Shapes;
 namespace Team7_LibraryApp
 {
     /// <summary>
-    /// Interaction logic for MainMenu.xaml
+    /// Interaction logic for ManageLibrary.xaml
     /// </summary>
-    public partial class MainMenu : UserControl
+    public partial class ManageLibrary : UserControl
     {
-        public MainMenu()
+        public ManageLibrary()
         {
             InitializeComponent();
         }
 
-
-
-        private void buttonReports_Click(object sender, RoutedEventArgs e)
+        private void buttonMainMenu_Click(object sender, RoutedEventArgs e)
         {
-
             var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new Reports());
-
+            mainWindow.SwapScreen(new MainMenu());
         }
-
 
         private void buttonLogout_Click(object sender, RoutedEventArgs e)
         {
-
             var mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new LogIn());
         }
 
-        private void buttonCheckout_Click(object sender, RoutedEventArgs e)
+        private void buttonAddEditUser_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new Checkout());
+            mainWindow.SwapScreen(new AddEditUser());
         }
 
-        private void buttonReturn_Click(object sender, RoutedEventArgs e)
+        private void buttonAddBook_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new Return());
+            mainWindow.SwapScreen(new AddBook());
         }
 
-
-        private void buttonManageLibrary_Click(object sender, RoutedEventArgs e)
+        private void buttonAddLibrarian_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new ManageLibrary());
+            mainWindow.SwapScreen(new AddLibrarian());
+        }
+
+        private void buttonChangeLocation_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = this.FindAncestor<MainWindow>();
+            mainWindow.SwapScreen(new ChangeLocation());
         }
     }
 }
