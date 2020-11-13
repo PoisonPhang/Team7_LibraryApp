@@ -9,6 +9,10 @@ UPDATE T7Library.Checkout
 SET ReturnDate = @RtrnDate
 WHERE BookId = @BookId AND ReturnDate IS NULL;
 
+UPDATE T7Library.BookCopy
+SET IsCheckedOut = 0
+WHERE BookId = @BookId;
+
 IF ((SELECT BC.LocationId FROM T7Library.BookCopy BC WHERE BC.BookId = @BookId) = @LocationId)
 BEGIN
 EXEC T7Library.MoveCopy @BookId = @BookId, @LocationId = @LocationId
