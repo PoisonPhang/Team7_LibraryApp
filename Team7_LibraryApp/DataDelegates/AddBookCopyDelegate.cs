@@ -10,7 +10,7 @@ using Team7_LibraryApp.Data;
 
 namespace Team7_LibraryApp.DataDelegates
 {
-    public class AddBookCopy : NonQueryDataDelegate<BookCopy>
+    public class AddBookCopyDelegate : NonQueryDataDelegate<BookCopy>
     {
         public int BookId;
         public readonly string ISBN;
@@ -18,7 +18,7 @@ namespace Team7_LibraryApp.DataDelegates
         public readonly bool IsCheckedOut;
         public readonly bool IsOutOfService;
 
-        public AddBookCopy(string ISBN, int LocationId) : base ("T7Library.AddBookCopy")
+        public AddBookCopyDelegate(string ISBN, int LocationId) : base ("T7Library.AddBookCopy")
         {
             this.ISBN = ISBN;
             this.LocationId = LocationId;
@@ -37,7 +37,7 @@ namespace Team7_LibraryApp.DataDelegates
 
         public override BookCopy Translate(SqlCommand command)
         {
-            this.BookId = (int)command.Parameters["BookId"].Value;
+            this.BookId = (int) command.Parameters["BookId"].Value;
             return new BookCopy(BookId, ISBN, LocationId, IsCheckedOut, IsOutOfService);
         }
     }
