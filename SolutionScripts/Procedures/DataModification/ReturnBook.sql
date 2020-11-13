@@ -22,11 +22,15 @@ SELECT B.ISBN,
 	B.Title,
 	BA.FirstName + N' ' + BA.LastName AS Author,
 	C.DueDate,
-	DATEDIFF(DAY, C.DueDate, SYSDATETIME()) AS DaysOverdue,
 	CASE
-		WHEN DATEDIFF(DAY, C.DueDate, SYSDATETIME()) < 7 THEN 0.25
-		WHEN DATEDIFF(DAY, C.DueDate, SYSDATETIME()) BETWEEN 7 AND 14 THEN 1.00
-		WHEN DATEDIFF(DAY, C.DueDate, SYSDATETIME()) > 15 THEN 4.00
+		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) < 0 THEN 0
+		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) > 0 THEN DATEDIFF(DAY, C.DueDate, @RtrnDate)
+	END AS DaysOverdue,
+	CASE
+		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) < 0 THEN 0
+		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) < 7 THEN 0.25
+		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) BETWEEN 7 AND 14 THEN 1.00
+		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) > 15 THEN 4.00
 	END AS PenaltyFee
 FROM T7Library.Checkout C
 INNER JOIN T7Library.BookCopy BC ON C.BookId = BC.BookId

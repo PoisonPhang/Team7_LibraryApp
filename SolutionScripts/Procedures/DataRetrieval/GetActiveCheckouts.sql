@@ -2,7 +2,7 @@ CREATE OR ALTER PROCEDURE T7Library.GetActiveCheckouts
 	@LocationId INT
 AS
 
-SELECT C.BookId, B.Title, BA.FirstName + N' ' + BA.LastName as Author, C.UserId, U.FirstName as UserFirstName, U.LastName AS UserLastName
+SELECT C.BookId, B.Title, BA.FirstName + N' ' + BA.LastName as Author, C.UserId, U.FirstName as UserFirstName, U.LastName AS UserLastName, C.OutDate, C.DueDate
 FROM T7Library.Checkout C
 INNER JOIN T7Library.BookCopy BC ON C.BookId = BC.BookId
 INNER JOIN T7Library.Book B ON BC.ISBN = B.ISBN

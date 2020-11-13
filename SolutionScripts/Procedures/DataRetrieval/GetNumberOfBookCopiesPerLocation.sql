@@ -1,4 +1,4 @@
-CREATE OR ALTER PROCEDURE T7Library.GetBookCopiesPerLocation
+CREATE OR ALTER PROCEDURE T7Library.GetNumberOfBookCopiesPerLocation
 	@ISBN NVARCHAR(13)
 AS
 

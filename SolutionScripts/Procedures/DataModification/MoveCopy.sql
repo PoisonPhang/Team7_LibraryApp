@@ -5,4 +5,4 @@ AS
 
 UPDATE T7Library.BookCopy
 SET LocationId = @LocationId
-WHERE LocationId <> @LocationId
+WHERE LocationId <> @LocationId AND BookId = @BookId;
