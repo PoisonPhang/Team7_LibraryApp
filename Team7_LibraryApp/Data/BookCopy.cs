@@ -10,7 +10,10 @@ namespace Team7_LibraryApp.Data
     {
         public int BookId { get; }
         public string ISBN { get; }
+        public string Title { get; }
+        public string Author { get; }
         public int LocationId { get; }
+        public string Location { get; }
         public bool IsCheckedOut { get; }
         public bool IsOutOfService { get; }
 
@@ -21,6 +24,14 @@ namespace Team7_LibraryApp.Data
             this.LocationId = LocationId;
             this.IsCheckedOut = IsCheckedOut;
             this.IsOutOfService = IsOutOfService;
+        }
+
+        public BookCopy(int BookId, string Title, string Author, string Location)
+        {
+            this.BookId = BookId;
+            this.Title = Title;
+            this.Author = Author;
+            this.Location = Location;
         }
     }
 }
