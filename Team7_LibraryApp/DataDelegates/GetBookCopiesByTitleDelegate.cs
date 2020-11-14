@@ -9,11 +9,11 @@ using Team7_LibraryApp.Data;
 
 namespace Team7_LibraryApp.DataDelegates
 {
-    class GetBookCopiesByTitleDelegate : DataReaderDelegate<IReadOnlyList<BookCopy>>
+    public class GetBookCopiesByTitleDelegate : DataReaderDelegate<IReadOnlyList<BookCopy>>
     {
         public readonly string TitlePartial;
 
-        public GetBookCopiesByTitleDelegate(string TitlePartial) : base("T7Library.GetAllBookCopiesByAuthor")
+        public GetBookCopiesByTitleDelegate(string TitlePartial) : base("T7Library.GetAllBookCopiesByTitle")
         {
             this.TitlePartial = TitlePartial;
         }

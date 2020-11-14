@@ -9,7 +9,7 @@ using Team7_LibraryApp.Data;
 
 namespace Team7_LibraryApp.DataDelegates
 {
-    class GetBookCopiesByAuthorDelegate : DataReaderDelegate<IReadOnlyList<BookCopy>>
+    public class GetBookCopiesByAuthorDelegate : DataReaderDelegate<IReadOnlyList<BookCopy>>
     {
         public readonly string AuthorPartial;
 
