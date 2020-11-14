@@ -21,6 +21,7 @@ END;
 SELECT B.ISBN,
 	B.Title,
 	BA.FirstName + N' ' + BA.LastName AS Author,
+	C.UserId,
 	C.DueDate,
 	CASE
 		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) < 0 THEN 0

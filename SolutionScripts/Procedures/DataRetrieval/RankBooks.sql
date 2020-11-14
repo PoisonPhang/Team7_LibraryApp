@@ -2,7 +2,7 @@ CREATE OR ALTER PROCEDURE T7Library.RankBooksByGenre
 	@GenreCode INT
 AS
 
-IF @GenreCode = 0
+IF @GenreCode = 1
 BEGIN
 SELECT B.ISBN, B.Title, BA.FirstName + ' ' + BA.LastName AS BookAuthor, GC.Genre, RANK() OVER(ORDER BY COUNT(DISTINCT C.CheckoutId)) AS [Rank]
 FROM T7Library.Book B
