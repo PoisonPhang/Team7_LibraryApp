@@ -42,5 +42,18 @@ namespace Team7_LibraryApp
             var mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new LogIn());
         }
+
+        private void buttonAddBook_Click(object sender, RoutedEventArgs e)
+        {
+            if (inputISBN.Text.Trim() == string.Empty )
+            {
+                MessageBox.Show("All fields are requried.");
+            }
+            else
+            {
+                var mainWindow = this.FindAncestor<MainWindow>();
+                mainWindow.SwapScreen(new AddBookTwo());
+            }
+        }
     }
 }

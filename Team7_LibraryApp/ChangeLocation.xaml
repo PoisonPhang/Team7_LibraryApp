@@ -25,5 +25,33 @@
             <Button x:Name="buttonLogout" VerticalAlignment="Center"  Content="Logout" Margin="10,0" FontSize="14" DockPanel.Dock="Right" Padding="10 0" HorizontalAlignment="Right" MaxWidth="100" Click="buttonLogout_Click"/>
 
         </DockPanel>
+
+        <StackPanel Grid.Row="1" MaxWidth="460" MaxHeight="250" Margin="20">
+            <StackPanel.Background>
+                <SolidColorBrush Color="AliceBlue" Opacity=".9"/>
+            </StackPanel.Background>
+
+            <Label Margin="20" MaxWidth="400" FontSize="28" >Change Location</Label>
+            <Separator></Separator>
+
+
+            <ComboBox Margin="0 10 0 0" MaxWidth="400"  FontSize="20">
+                <ComboBoxItem>1) Beltsville</ComboBoxItem>
+                <ComboBoxItem>2) Champlin</ComboBoxItem>
+                <ComboBoxItem>3) Lawrence</ComboBoxItem>
+                <ComboBoxItem>4) Seattle</ComboBoxItem>
+                <ComboBoxItem>5) Clarkston</ComboBoxItem>
+                <ComboBoxItem>6) Perth Amboy</ComboBoxItem>
+                <ComboBoxItem>7) Syosset</ComboBoxItem>
+                <ComboBoxItem>8) Staunton</ComboBoxItem>
+                <ComboBoxItem>9) Manchester</ComboBoxItem>
+                <ComboBoxItem>10) Raeford</ComboBoxItem>
+
+            </ComboBox>
+
+
+            <Button x:Name="buttonChangeLocation" MaxWidth="400" FontSize="20" Content="Change" Margin="20" Padding="5" />
+        </StackPanel>
+
     </Grid>
 </UserControl>

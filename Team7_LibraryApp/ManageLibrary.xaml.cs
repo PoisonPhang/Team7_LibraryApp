@@ -40,7 +40,7 @@ namespace Team7_LibraryApp
         private void buttonAddEditUser_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new AddEditUser());
+            mainWindow.SwapScreen(new AddUser());
         }
 
         private void buttonAddBook_Click(object sender, RoutedEventArgs e)

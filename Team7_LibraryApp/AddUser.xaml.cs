@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Team7_LibraryApp
 {
     /// <summary>
-    /// Interaction logic for AddLibrarian.xaml
+    /// Interaction logic for AddUser.xaml
     /// </summary>
-    public partial class AddLibrarian : UserControl
+    public partial class AddUser : UserControl
     {
-        public AddLibrarian()
+        public AddUser()
         {
             InitializeComponent();
         }
@@ -41,15 +41,6 @@ namespace Team7_LibraryApp
         {
             var mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new LogIn());
-        }
-
-        private void buttonAddLibrarian_Click(object sender, RoutedEventArgs e)
-        {
-
-            if(inputFirstName.Text.Trim() == string.Empty || inputLastName.Text.Trim() == string.Empty || inputPassword.Text.Trim() == string.Empty || inputUsername.Text.Trim() == string.Empty)
-            {
-                MessageBox.Show("All fields are requried");
-            }
 
         }
     }

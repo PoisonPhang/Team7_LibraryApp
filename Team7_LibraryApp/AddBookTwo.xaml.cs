@@ -16,14 +16,16 @@ using System.Windows.Shapes;
 namespace Team7_LibraryApp
 {
     /// <summary>
-    /// Interaction logic for AddEditUser.xaml
+    /// Interaction logic for AddBookTwo.xaml
     /// </summary>
-    public partial class AddEditUser : UserControl
+    public partial class AddBookTwo : UserControl
     {
-        public AddEditUser()
+        public AddBookTwo()
         {
             InitializeComponent();
         }
+
+        #region Menu Buttons
 
         private void buttonManageLibrary_Click(object sender, RoutedEventArgs e)
         {
@@ -42,5 +44,10 @@ namespace Team7_LibraryApp
             var mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new LogIn());
         }
+
+        #endregion
+
+
+
     }
 }

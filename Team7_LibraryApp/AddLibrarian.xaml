@@ -26,24 +26,27 @@
 
         </DockPanel>
 
-        <StackPanel Grid.Row="1" MaxWidth="400">
+        <StackPanel Grid.Row="1" MaxWidth="460" MaxHeight="500" Margin="20">
             <StackPanel.Background>
                 <SolidColorBrush Color="AliceBlue" Opacity=".8"/>
             </StackPanel.Background>
 
-            <Label>Add Librarian</Label>
+            <Label Margin="20" MaxWidth="400" FontSize="28" >Add Librarian</Label>
             <Separator></Separator>
 
+            <Label Margin="0 10 0 0" MaxWidth="400"  FontSize="20">First Name:</Label>
+            <TextBox x:Name="inputFirstName" MaxWidth="400"  FontSize="20"></TextBox>
 
-            <Label>First Name:</Label>
-            <TextBox></TextBox>
-            <Label>LastName</Label>
-            <TextBox></TextBox>
+            <Label Margin="0 10 0 0" MaxWidth="400" FontSize="20">Last Name:</Label>
+            <TextBox x:Name="inputLastName" MaxWidth="400" FontSize="20"></TextBox>
 
-            <Label>Password</Label>
-            <TextBox></TextBox>
+            <Label Margin="0 10 0 0" MaxWidth="400" FontSize="20">Username:</Label>
+            <TextBox x:Name="inputUsername" MaxWidth="400" FontSize="20"></TextBox>
 
-            <Button Content="Create Librarian"></Button>
+            <Label Margin="0 10 0 0" MaxWidth="400" FontSize="20">Password:</Label>
+            <TextBox x:Name="inputPassword" MaxWidth="400" FontSize="20"></TextBox>
+
+            <Button x:Name="buttonAddLibrarian" MaxWidth="400" FontSize="20" Content="Add Librarian" Margin="20" Padding="5" Click="buttonAddLibrarian_Click"/>
         </StackPanel>
 
     </Grid>

@@ -24,12 +24,6 @@ namespace Team7_LibraryApp
         {
             InitializeComponent();
 
-            List<ReportOneObject> items = new List<ReportOneObject>();
-            items.Add(new ReportOneObject { FirstName = "John", LastName = "Doe", Email = "jd@gmail.com", BookTitle = "Educated : a memoir", BookAuthor = "Balough", DueDate="soon" });
-            items.Add(new ReportOneObject { FirstName = "Jane", LastName = "Doe", Email = "janed@gmail.com", BookTitle = "Educated : a memoir", BookAuthor = "Balough", DueDate="soon" });
-
-            listViewReportOne.ItemsSource = items;
-
 
         }
 

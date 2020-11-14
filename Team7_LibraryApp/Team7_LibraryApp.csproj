@@ -59,11 +59,14 @@
     <Compile Include="AddBook.xaml.cs">
       <DependentUpon>AddBook.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddEditUser.xaml.cs">
-      <DependentUpon>AddEditUser.xaml</DependentUpon>
+    <Compile Include="AddBookTwo.xaml.cs">
+      <DependentUpon>AddBookTwo.xaml</DependentUpon>
     </Compile>
     <Compile Include="AddLibrarian.xaml.cs">
       <DependentUpon>AddLibrarian.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddUser.xaml.cs">
+      <DependentUpon>AddUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="ChangeLocation.xaml.cs">
       <DependentUpon>ChangeLocation.xaml</DependentUpon>
@@ -80,7 +83,6 @@
     <Compile Include="ReportOne.xaml.cs">
       <DependentUpon>ReportOne.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ReportOneObject.cs" />
     <Compile Include="Reports.xaml.cs">
       <DependentUpon>Reports.xaml</DependentUpon>
     </Compile>
@@ -100,11 +102,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddEditUser.xaml">
+    <Page Include="AddBookTwo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddLibrarian.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
