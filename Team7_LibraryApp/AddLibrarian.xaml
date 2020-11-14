@@ -25,5 +25,26 @@
             <Button x:Name="buttonLogout" VerticalAlignment="Center"  Content="Logout" Margin="10,0" FontSize="14" DockPanel.Dock="Right" Padding="10 0" HorizontalAlignment="Right" MaxWidth="100" Click="buttonLogout_Click"/>
 
         </DockPanel>
+
+        <StackPanel Grid.Row="1" MaxWidth="400">
+            <StackPanel.Background>
+                <SolidColorBrush Color="AliceBlue" Opacity=".8"/>
+            </StackPanel.Background>
+
+            <Label>Add Librarian</Label>
+            <Separator></Separator>
+
+
+            <Label>First Name:</Label>
+            <TextBox></TextBox>
+            <Label>LastName</Label>
+            <TextBox></TextBox>
+
+            <Label>Password</Label>
+            <TextBox></TextBox>
+
+            <Button Content="Create Librarian"></Button>
+        </StackPanel>
+
     </Grid>
 </UserControl>

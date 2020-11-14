@@ -46,6 +46,8 @@
                     <GridViewColumn Header="Library Name" DisplayMemberBinding="{Binding LibraryName}"/>
                     <GridViewColumn Header="Rank" DisplayMemberBinding="{Binding Rank}"/>
                     <GridViewColumn Header="Number of Checkouts" DisplayMemberBinding="{Binding NumberOfCheckouts}"/>
+                    <GridViewColumn Header="Location ID" DisplayMemberBinding="{Binding LocationId}"/>
+
                 </GridView>
             </ListView.View>
         </ListView>

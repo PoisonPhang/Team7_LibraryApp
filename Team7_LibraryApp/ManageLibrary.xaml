@@ -32,11 +32,10 @@
 
             <Label Content="Manage Library" HorizontalAlignment="Center" FontSize="34" Margin="20"/>
             <Separator/>
-            <Button x:Name="buttonAddEditUser" Content="Add / Edit User" FontSize="28" MaxWidth="350" Margin="20" Click="buttonAddEditUser_Click"/>
+            <Button x:Name="buttonAddEditUser" Content="Add User" FontSize="28" MaxWidth="350" Margin="20" Click="buttonAddEditUser_Click"/>
             <Button x:Name="buttonAddBook" Content="Add Book" FontSize="28" MaxWidth="350" Margin="20" Click="buttonAddBook_Click"/>
             <Button x:Name="buttonAddLibrarian" Content="Add Librarian" FontSize="28" MaxWidth="350" Margin="20" Click="buttonAddLibrarian_Click"/>
             <Button x:Name="buttonChangeLocation" Content="Change Location" FontSize="28" MaxWidth="350" Margin="20" Click="buttonChangeLocation_Click"/>
-
             <Separator/>
 
         </StackPanel>           

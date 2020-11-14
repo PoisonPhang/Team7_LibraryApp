@@ -26,5 +26,33 @@
             
         </DockPanel>
 
+        <StackPanel Grid.Row="1" MaxWidth="400">
+            <StackPanel.Background>
+                <SolidColorBrush Color="AliceBlue" Opacity=".8"/>
+            </StackPanel.Background>
+
+            <Label>Add User</Label>
+            <Separator></Separator>
+            <Label>First Name:</Label>
+            <TextBox></TextBox>
+            <Label>LastName</Label>
+            <TextBox></TextBox>
+            <Label>Email:</Label>
+            <TextBox></TextBox>
+            <Label>Street:</Label>
+            <TextBox></TextBox>
+            <Label>Unit:</Label>
+            <TextBox></TextBox>
+            <Label>ZipCode:</Label>
+            <TextBox></TextBox>
+            <Label>ZipCode:</Label>
+            <TextBox></TextBox>
+            <Label>City Name:</Label>
+            <TextBox></TextBox>
+            <Label>State Code:</Label>
+            <TextBox></TextBox>
+            <Button Content="Create User"></Button>
+        </StackPanel>
+
     </Grid>
 </UserControl>

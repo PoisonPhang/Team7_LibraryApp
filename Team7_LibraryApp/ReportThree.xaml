@@ -28,6 +28,7 @@
         <ListView x:Name="listViewReportOne" Margin="50 50 50 50" FontSize="18" Grid.Row="1">
             <ListView.View>
                 <GridView>
+                    <GridViewColumn Header="Book ID" DisplayMemberBinding="{Binding BookISBN}"/>
                     <GridViewColumn Header="Book ISBN" DisplayMemberBinding="{Binding BookISBN}"/>
                     <GridViewColumn Header="Book Title" DisplayMemberBinding="{Binding BookTitle}"/>
                     <GridViewColumn Header="Book Author" DisplayMemberBinding="{Binding BookAuthor}"/>

@@ -33,18 +33,25 @@
                 <SolidColorBrush Color="AliceBlue" Opacity=".9"/>
             </StackPanel.Background>
 
-            <Label FontSize="20" Margin="50 3 10 3">Filter:</Label>
+            <Label FontSize="20" Margin="50 3 10 3">Search:</Label>
             <TextBox MinWidth="250" FontSize="20" Margin="0 3 10 3"></TextBox>
             <ComboBox Margin="40 3 0 3" FontSize="20" MinWidth="250">
-                <ComboBoxItem>Name</ComboBoxItem>
+                <ComboBoxItem>User's Name</ComboBoxItem>
                 <ComboBoxItem>Book ID</ComboBoxItem>
             </ComboBox>
-            <Button Margin="40 5 50 5" MinWidth="200" Content="Filter" FontSize="20" Padding="10 0"/>
+            <Button Margin="40 5 50 5" MinWidth="200" Content="Search" FontSize="20" Padding="10 0"/>
         </StackPanel>
 
         <ListView x:Name="listViewReportOne" Margin="50 0 50 0" FontSize="18" Grid.Row="2">
             <ListView.View>
                 <GridView>
+                    <GridViewColumn Header="Book ID" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="Author" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="USER ID" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="User's Name" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="Checked Out Date" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="Due Date" DisplayMemberBinding="{Binding Title}"/>
 
                 </GridView>
             </ListView.View>
