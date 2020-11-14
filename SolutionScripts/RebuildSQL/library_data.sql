@@ -113,50 +113,112 @@ EXEC T7Library.AddBook @Title = N'Library of souls : the third novel of Miss Per
 EXEC T7Library.AddBook @Title = N'Eragon', @Publisher = N'Alfred A. Knopf', @ISBN = 0375826688, @Year = 2003, @Genre = N'Young Adult', @AuthorFirstName = N'Christopher', @AuthorLastName = N'Paolini';
 EXEC T7Library.AddBook @Title = N'The toll', @Publisher = N'Simon & Schuster', @ISBN = 9781481497060, @Year = 2019, @Genre = N'Young Adult', @AuthorFirstName = N'Neal', @AuthorLastName = N'Shusterman';
 
-INSERT T7Library.Librarian(Username, FirstName, LastName)
-VALUES
-    (N'HLucas', N'Hugo', N'Lucas'),
-    (N'RBecker', N'Reese', N'Becker'),
-    (N'ADavila', N'Alfred', N'Davila'),
-    (N'JDunn', N'Jadiel', N'Dunn'),
-    (N'DCochran', N'Dangelo', N'Cochran'),
+DECLARE  @StartDateForAll DATE = '2010-01-01';
 
-    (N'HStewart', N'Hazel', N'Stewart'),
-    (N'KCamacho', N'Kennedy', N'Camacho'),
-    (N'DBeltran', N'Devin', N'Beltran'),
-    (N'JRay', N'Jay', N'Ray'),
-    (N'CMcDaniel', N'Cory', N'McDaniel'),
+-- Password: V[.ef8LU	
+EXEC T7Library.AddLibrarian @UserName = "HLucas", @PasswordHash = N'b855751c0f5b356379f7a53e0bafe15b', @FirstName = N'Hugo', @LastName = N'Lucas', @StartDate = @StartDateForAll;
 
-    (N'TMcMahon', N'Tamara', N'McMahon'),
-    (N'IPowell', N'Ireland', N'Powell'),
-    (N'DHoover', N'Dax', N'Hoover'),
-    (N'KAndrews', N'Kasen', N'Andrews'),
-    (N'JSolomon', N'Juliette', N'Solomon'),
+-- Password: HPa24qj%
+EXEC T7Library.AddLibrarian @UserName = "RBecker", @PasswordHash = N'6f185236b4944b6faf15ab280e4f8654', @FirstName = N'Reese', @LastName = N'Becker', @StartDate = @StartDateForAll;
 
-    (N'KStein', N'Kayden', N'Stein'),
-    (N'UWaters', N'Uriah', N'Waters'),
-    (N'SDickson', N'Shania', N'Dickson'),
-    (N'LOrtega', N'Lisa', N'Ortega'),
-    (N'DSimon', N'Dominick', N'Simon'),
+-- Password: rHA(q6%j
+EXEC T7Library.AddLibrarian @UserName = "ADavila", @PasswordHash = N'72a49dbe60f14ce2cb06d36fbf16eb1b', @FirstName = N'Alfred', @LastName = N'Davila', @StartDate = @StartDateForAll;
 
-    (N'DFitzpatrick', N'Dorian', N'Fitzpatrick'),
-    (N'MSchultz', N'Madalynn', N'Schultz'),
-    (N'KMann', N'Killian', N'Mann'),
-    (N'BPotter', N'Bridget', N'Potter'),
-    (N'GFranco', N'Gauge', N'Franco'),
+-- Password: peZR3@}r
+EXEC T7Library.AddLibrarian @UserName = "JDunn", @PasswordHash = N'313131e2ba02583b36cfb9fdceea6352', @FirstName = N'Jadiel', @LastName = N'Dunn', @StartDate = @StartDateForAll;
 
-    (N'ALandry', N'Asia', N'Landry'),
-    (N'AMay', N'Augustus', N'May'),
-    (N'CSchneider', N'Carlie', N'Schneider'),
-    (N'JHines', N'Jazlene', N'Hines'),
-    (N'LWang', N'Lainey', N'Wang'),
+-- Password: &-AV.Wt9
+EXEC T7Library.AddLibrarian @UserName = "DCochran", @PasswordHash = N'1ab83332470412dafc6c24834a9ad430', @FirstName = N'Dangelo', @LastName = N'Cochran', @StartDate = @StartDateForAll;
 
-    (N'XMendoza', N'Xzavier', N'Mendoza'),
-    (N'CFarmer', N'Cordell', N'Farmer'),
-    (N'LSanford', N'Lee', N'Sanford'),
-    (N'SQuinn', N'Stephany', N'Quinn'),
-    (N'GHeath', N'Guadalupe', N'Heath')
-    ;
+-- Password: kBw_F9z+
+EXEC T7Library.AddLibrarian @UserName = "HStewart", @PasswordHash = N'1703a3cde5f5d0a9a27161b463d2c58b', @FirstName = N'Hazel', @LastName = N'Stewart', @StartDate = @StartDateForAll;
+
+-- Password: 6/gR3bck
+EXEC T7Library.AddLibrarian @UserName = "KCamacho", @PasswordHash = N'e171c1536c96feba5c3737572564a3d9', @FirstName = N'Kennedy', @LastName = N'Camacho', @StartDate = @StartDateForAll;
+
+-- Password: WcpuJ3g^
+EXEC T7Library.AddLibrarian @UserName = "DBeltran", @PasswordHash = N'a2e31c1992362ddc6956769f96fb4b57', @FirstName = N'Devin', @LastName = N'Beltran', @StartDate = @StartDateForAll;
+
+-- Password: y_]Y6Vcv
+EXEC T7Library.AddLibrarian @UserName = "JRay", @PasswordHash = N'6e780d21af7dd46958212341423e686e', @FirstName = N'Jay', @LastName = N'Ray', @StartDate = @StartDateForAll;
+
+-- Password: fzx-6NeQ
+EXEC T7Library.AddLibrarian @UserName = "CMcDaniel", @PasswordHash = N'cde89014e55db18d8dc82c6a282414dd', @FirstName = N'Cory', @LastName = N'McDaniel', @StartDate = @StartDateForAll;
+
+-- Password: >s+Cn%M7
+EXEC T7Library.AddLibrarian @UserName = "TMcMahon", @PasswordHash = N'e48f725079d0df6e3d778fb6d0c50993', @FirstName = N'Tamara', @LastName = N'McMahon', @StartDate = @StartDateForAll;
+
+-- Password: /8xQ?epq
+EXEC T7Library.AddLibrarian @UserName = "IPowell", @PasswordHash = N'0241422eeba6c7abbb82d6e15e3f77e8', @FirstName = N'Ireland', @LastName = N'Powell', @StartDate = @StartDateForAll;
+
+-- Password: cy8@2ZLM
+EXEC T7Library.AddLibrarian @UserName = "DHoover", @PasswordHash = N'aec04cd4810929bcbbfbec53c2e48d85', @FirstName = N'Dax', @LastName = N'Hoover', @StartDate = @StartDateForAll;
+
+-- Password: {g.kVb86
+EXEC T7Library.AddLibrarian @UserName = "KAndrews", @PasswordHash = N'40aacd189f73b9ed3952f35a8bc282a6', @FirstName = N'Kasen', @LastName = N'Andrews', @StartDate = @StartDateForAll;
+
+-- Password: vhXQsJ8*
+EXEC T7Library.AddLibrarian @UserName = "JSolomon", @PasswordHash = N'a9aba51ff883b9476f8cd0c6fce3b3db', @FirstName = N'Juliette', @LastName = N'Solomon', @StartDate = @StartDateForAll;
+
+-- Password: FsM8]3V{
+EXEC T7Library.AddLibrarian @UserName = "KStein", @PasswordHash = N'e468b78867632b402343e92b0163ea48', @FirstName = N'Kayden', @LastName = N'Stein', @StartDate = @StartDateForAll;
+
+-- Password: ]([F{5s&
+EXEC T7Library.AddLibrarian @UserName = "UWaters", @PasswordHash = N'09be30d6b0b2380f44f8d6d227bc4320', @FirstName = N'Uriah', @LastName = N'Waters', @StartDate = @StartDateForAll;
+
+-- Password: =5&nmSh+
+EXEC T7Library.AddLibrarian @UserName = "SDickson", @PasswordHash = N'5c9c31a61c47c4e52951380880e2da98', @FirstName = N'Shania', @LastName = N'Dickson', @StartDate = @StartDateForAll;
+
+-- Password: _H@5BS.j
+EXEC T7Library.AddLibrarian @UserName = "LOrtega", @PasswordHash = N'7aaa813802656a1f8e9ed819a9c150e4', @FirstName = N'Lisa', @LastName = N'Ortega', @StartDate = @StartDateForAll;
+
+-- Password: >/4a6.3X
+EXEC T7Library.AddLibrarian @UserName = "DSimon", @PasswordHash = N'df0a50940ee61474ff72801ce385e503', @FirstName = N'Dominick', @LastName = N'Simon', @StartDate = @StartDateForAll;
+
+-- Password: p]B>6s4u
+EXEC T7Library.AddLibrarian @UserName = "DFitzpatrick", @PasswordHash = N'5d3e73747f926adee22e9f17cdd8d05a', @FirstName = N'Dorian', @LastName = N'Fitzpatrick', @StartDate = @StartDateForAll;
+
+-- Password: *F3yP(BN
+EXEC T7Library.AddLibrarian @UserName = "MSchultz", @PasswordHash = N'4eda1e8445cf29531317308cf3c7f241', @FirstName = N'Madalynn', @LastName = N'Schultz', @StartDate = @StartDateForAll;
+
+-- Password: @vc3w.Cs
+EXEC T7Library.AddLibrarian @UserName = "KMann", @PasswordHash = N'a7ef6c7fdfff66254de2bea359094ecb', @FirstName = N'Killian', @LastName = N'Mann', @StartDate = @StartDateForAll;
+
+-- Password: &bPjKq=4
+EXEC T7Library.AddLibrarian @UserName = "BPotter", @PasswordHash = N'f22ef0d6187266c68f9bcdeb413382ac', @FirstName = N'Bridget', @LastName = N'Potter', @StartDate = @StartDateForAll;
+
+-- Password: QvNfA8w!
+EXEC T7Library.AddLibrarian @UserName = "GFranco", @PasswordHash = N'bd4da0b0e6c70bd928bd1d4e88ead543', @FirstName = N'Gauge', @LastName = N'Franco', @StartDate = @StartDateForAll;
+
+-- Password: nyP9>w&Q
+EXEC T7Library.AddLibrarian @UserName = "ALandry", @PasswordHash = N'4d73e8fb387c5f9abe942477630ba3ec', @FirstName = N'Asia', @LastName = N'Landry', @StartDate = @StartDateForAll;
+
+-- Password: 7zXU6=%s
+EXEC T7Library.AddLibrarian @UserName = "AMay", @PasswordHash = N'ba0add1e5cbfa7c4e9cb5d05f97c9a6f', @FirstName = N'Augustus', @LastName = N'May', @StartDate = @StartDateForAll;
+
+-- Password: *J[Xq8r>
+EXEC T7Library.AddLibrarian @UserName = "CSchneider", @PasswordHash = N'6abf5911985e7677ca643bc55724bef5', @FirstName = N'Carlie', @LastName = N'Schneider', @StartDate = @StartDateForAll;
+
+-- Password: ?(z9WUB.
+EXEC T7Library.AddLibrarian @UserName = "JHines", @PasswordHash = N'3e7b12a9320656ef49af235069a16b2a', @FirstName = N'Jazlene', @LastName = N'Hines', @StartDate = @StartDateForAll;
+
+-- Password: !h7kUzQ*
+EXEC T7Library.AddLibrarian @UserName = "LWang", @PasswordHash = N'e733519f558219bbd79c01f5b92ad5f8', @FirstName = N'Lainey', @LastName = N'Wang', @StartDate = @StartDateForAll;
+
+-- Password: 8mL.?x{K
+EXEC T7Library.AddLibrarian @UserName = "XMendoza", @PasswordHash = N'10fc22553f5dcf4497fa4ee5e1e1303a', @FirstName = N'Xzavier', @LastName = N'Mendoza', @StartDate = @StartDateForAll;
+
+-- Password: n(.2G57/
+EXEC T7Library.AddLibrarian @UserName = "CFarmer", @PasswordHash = N'992c0892a7258281f0e33e62e69a6f9f', @FirstName = N'Cordell', @LastName = N'Farmer', @StartDate = @StartDateForAll;
+
+-- Password: 7WEkhn}^
+EXEC T7Library.AddLibrarian @UserName = "LSanford", @PasswordHash = N'3465143d26ce798e7eaff5418dafc68a', @FirstName = N'Lee', @LastName = N'Sanford', @StartDate = @StartDateForAll;
+
+-- Password: vrkK6+xd
+EXEC T7Library.AddLibrarian @UserName = "SQuinn", @PasswordHash = N'7140afc2877bc0a4e44acd74e94bbc2c', @FirstName = N'Stephany', @LastName = N'Quinn', @StartDate = @StartDateForAll;
+
+-- Password: 5WHX=a@4
+EXEC T7Library.AddLibrarian @UserName = "GHeath", @PasswordHash = N'724fcdda17febb36cfab8fdfe670def6', @FirstName = N'Guadalupe', @LastName = N'Heath', @StartDate = @StartDateForAll;
 
 INSERT T7Library.[User](FirstName, LastName)
 VALUES

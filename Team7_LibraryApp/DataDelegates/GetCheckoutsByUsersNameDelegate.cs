@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,11 @@ using Team7_LibraryApp.Data;
 
 namespace Team7_LibraryApp.DataDelegates
 {
-    class GetCheckoutsByUsersNameDelegate
+    class GetCheckoutsByUsersNameDelegate : DataReaderDelegate<IReadOnlyList<BookCheckout>>
     {
         public readonly string UsersNamePartial;
 
-        public GetCheckoutsByBookIdDelegate(int UsersNamePartial) : base("T7Library.GetCheckoutByUsersName")
+        public GetCheckoutsByUsersNameDelegate(string UsersNamePartial) : base("T7Library.GetCheckoutByUsersName")
         {
             this.UsersNamePartial = UsersNamePartial;
         }
