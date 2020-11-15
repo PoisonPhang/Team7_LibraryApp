@@ -123,5 +123,12 @@ namespace Team7_LibraryApp
 
             return executor.ExecuteReader(d);
         }
+
+        public IReadOnlyList<BookCheckout> GetAllActiveCheckouts()
+        {
+            GetAllActiveCheckouts d = new GetAllActiveCheckouts();
+
+            return executor.ExecuteReader();
+        }
     }
 }
