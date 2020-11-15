@@ -66,18 +66,27 @@
     </Compile>
     <Compile Include="DataDelegates\AddBookCopyDelegate.cs" />
     <Compile Include="DataDelegates\AddBookDelegate.cs" />
+    <Compile Include="DataDelegates\AddLibrarianDelegate.cs" />
     <Compile Include="DataDelegates\AddUserDelegate.cs" />
     <Compile Include="DataDelegates\CheckoutBookDelegate.cs" />
     <Compile Include="DataDelegates\GetBookCopiesByAuthorDelegate.cs" />
     <Compile Include="DataDelegates\GetBookCopiesByTitleDelegate.cs" />
     <Compile Include="DataDelegates\GetCheckoutsByBookIdDelegate.cs" />
     <Compile Include="DataDelegates\GetCheckoutsByUsersNameDelegate.cs" />
+    <Compile Include="DataDelegates\GetOverdueCheckoutsDelegate.cs" />
+    <Compile Include="DataDelegates\GetThreeDaysLeftDelegate.cs" />
     <Compile Include="DataDelegates\MoveCopyDelegate.cs" />
+    <Compile Include="DataDelegates\RankBooksDelegate.cs" />
+    <Compile Include="DataDelegates\RankLibrariesDelegate.cs" />
     <Compile Include="DataDelegates\ReturnBookDelegate.cs" />
     <Compile Include="Data\Book.cs" />
     <Compile Include="Data\BookCopy.cs" />
     <Compile Include="Data\BookCheckout.cs" />
+    <Compile Include="Data\BookRankReport.cs" />
     <Compile Include="Data\BookReturn.cs" />
+    <Compile Include="Data\LateReport.cs" />
+    <Compile Include="Data\LibraryRankReport.cs" />
+    <Compile Include="Data\ThreeDaysLeftReport.cs" />
     <Compile Include="Data\User.cs" />
     <Compile Include="LibraryDataRepo.cs" />
     <Compile Include="MainWindow.xaml.cs">
