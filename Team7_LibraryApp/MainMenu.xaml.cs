@@ -52,7 +52,7 @@ namespace Team7_LibraryApp
         private void buttonReturn_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new Return());
+            mainWindow.SwapScreen(new Return(mainWindow));
         }
 
 
