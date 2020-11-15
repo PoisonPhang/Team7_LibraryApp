@@ -20,17 +20,23 @@ namespace Team7_LibraryApp
     /// </summary>
     public partial class ReportOne : UserControl
     {
-        public ReportOne()
+        private MainWindow mainWindow;
+
+        public ReportOne(MainWindow m)
         {
+
+         
+
             InitializeComponent();
 
+            listView3DaysLeftReport.ItemsSource = m.dataRepo.GetThreeDaysLeft();
 
         }
-
+      
         private void buttonMainMenu_Click(object sender, RoutedEventArgs e)
         {
 
-            var mainWindow = this.FindAncestor<MainWindow>();
+            mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new MainMenu());
 
         }
@@ -38,7 +44,7 @@ namespace Team7_LibraryApp
         private void buttonReports_Click(object sender, RoutedEventArgs e)
         {
 
-            var mainWindow = this.FindAncestor<MainWindow>();
+            mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new Reports());
 
         }

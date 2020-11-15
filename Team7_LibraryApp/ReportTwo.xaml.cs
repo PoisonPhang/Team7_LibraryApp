@@ -20,9 +20,15 @@ namespace Team7_LibraryApp
     /// </summary>
     public partial class ReportTwo : UserControl
     {
-        public ReportTwo()
+        private MainWindow mainWindow;
+
+        public ReportTwo(MainWindow m)
         {
             InitializeComponent();
+            mainWindow = m;
+
+            listViewMostPopularBooksReport.ItemsSource = mainWindow.dataRepo.GetBookRankReports(1);
+
         }
 
         private void buttonMainMenu_Click(object sender, RoutedEventArgs e)
@@ -47,6 +53,12 @@ namespace Team7_LibraryApp
             var mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new LogIn());
 
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int genre = SelectGenre.SelectedIndex + 2;
+            listViewMostPopularBooksReport.ItemsSource = mainWindow.dataRepo.GetBookRankReports(genre);
         }
     }
 }

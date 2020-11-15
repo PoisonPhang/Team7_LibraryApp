@@ -34,13 +34,13 @@
             </StackPanel.Background>
             
             <Label FontSize="16" Margin="50 3 0 3">Start Date:</Label>
-            <DatePicker FontSize="16" Margin="0 3 10 3"></DatePicker>
+            <DatePicker Name="StartDate" FontSize="16" Margin="0 3 10 3"></DatePicker>
             <Label FontSize="16" Margin="0 3 0 3">End Date:</Label>
-            <DatePicker Margin="0 3 0 3" FontSize="16"></DatePicker>
-            <Button Margin="10 5 50 5" Content="Submit" FontSize="16" Padding="10 0"/>
+            <DatePicker Name="EndDate" Margin="0 3 0 3" FontSize="16"></DatePicker>
+            <Button Name="Submit"  Margin="10 5 50 5" Content="Submit" FontSize="16" Padding="10 0" Click="Submit_Click"/>
         </StackPanel>
 
-        <ListView x:Name="listViewReportOne" Margin="50 0 50 50" FontSize="18" Grid.Row="2">
+        <ListView x:Name="listViewRankLibraryReport" Margin="50 0 50 50" FontSize="18" Grid.Row="2">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Library Name" DisplayMemberBinding="{Binding LibraryName}"/>

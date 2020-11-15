@@ -20,9 +20,12 @@ namespace Team7_LibraryApp
     /// </summary>
     public partial class ReportFour : UserControl
     {
-        public ReportFour()
+        private MainWindow mainWindow;
+
+        public ReportFour(MainWindow m)
         {
             InitializeComponent();
+            mainWindow = m;
         }
 
         private void buttonMainMenu_Click(object sender, RoutedEventArgs e)
@@ -47,6 +50,14 @@ namespace Team7_LibraryApp
             var mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new LogIn());
 
+        }
+
+        private void Submit_Click(object sender, RoutedEventArgs e)
+        {     
+            string startDate = StartDate.SelectedDate.Value.ToString("yyyy-MM-dd");
+            string endDate = EndDate.SelectedDate.Value.ToString("yyyy-MM-dd");
+
+            listViewRankLibraryReport.ItemsSource = mainWindow.dataRepo.GetLibraryRankReports(startDate, endDate);
         }
     }
 }

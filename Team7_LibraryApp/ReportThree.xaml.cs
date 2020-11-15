@@ -20,9 +20,11 @@ namespace Team7_LibraryApp
     /// </summary>
     public partial class ReportThree : UserControl
     {
-        public ReportThree()
+        public ReportThree(MainWindow m)
         {
             InitializeComponent();
+            listViewOverdueReport.ItemsSource = m.dataRepo.GetOverDueCheckouts();
+
         }
 
         private void buttonMainMenu_Click(object sender, RoutedEventArgs e)

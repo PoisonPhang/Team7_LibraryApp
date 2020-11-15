@@ -25,7 +25,7 @@
             <Button x:Name="buttonLogout" VerticalAlignment="Center"  Content="Logout" Margin="10,0" FontSize="14" DockPanel.Dock="Right" Padding="10 0" HorizontalAlignment="Right" MaxWidth="100" Click="buttonLogout_Click"/>
         </DockPanel>
 
-        <ListView x:Name="listViewReportOne" Margin="50 50 50 50" FontSize="18" Grid.Row="1">
+        <ListView x:Name="listView3DaysLeftReport" Margin="50 50 50 50" FontSize="18" Grid.Row="1">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FirstName}"/>

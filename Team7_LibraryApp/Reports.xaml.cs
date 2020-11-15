@@ -28,7 +28,7 @@ namespace Team7_LibraryApp
         private void buttonReportOne_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new ReportOne());
+            mainWindow.SwapScreen(new ReportOne(mainWindow));
         }
 
         private void buttonMainMenu_Click(object sender, RoutedEventArgs e)
@@ -46,19 +46,19 @@ namespace Team7_LibraryApp
         private void buttonReportTwo_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new ReportTwo());
+            mainWindow.SwapScreen(new ReportTwo(mainWindow));
         }
 
         private void buttonReportThree_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new ReportThree());
+            mainWindow.SwapScreen(new ReportThree(mainWindow));
         }
 
         private void buttonReportFour_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new ReportFour());
+            mainWindow.SwapScreen(new ReportFour(mainWindow));
         }
     }
 }

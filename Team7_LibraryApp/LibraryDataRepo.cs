@@ -117,9 +117,9 @@ namespace Team7_LibraryApp
             return executor.ExecuteReader(d);
         }
 
-        public IReadOnlyList<LibraryRankReport> GetLibraryRankReports()
+        public IReadOnlyList<LibraryRankReport> GetLibraryRankReports(string StartDate, string EndDate)
         {
-            RankLibrariesDelegate d = new RankLibrariesDelegate();
+            RankLibrariesDelegate d = new RankLibrariesDelegate(StartDate, EndDate);
 
             return executor.ExecuteReader(d);
         }

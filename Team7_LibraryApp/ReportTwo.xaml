@@ -29,7 +29,7 @@
             </DockPanel>
 
             <StackPanel Grid.Row="1" MaxWidth="300" Margin="10" Orientation="Horizontal">
-                <ComboBox Margin="10" FontSize="16" MinWidth="200">
+                <ComboBox Name="SelectGenre" Margin="10" FontSize="16" MinWidth="200" SelectionChanged="ComboBox_SelectionChanged">
                     <ComboBoxItem>Fiction</ComboBoxItem>
                     <ComboBoxItem>Non-Fiction</ComboBoxItem>
                     <ComboBoxItem>Mystery</ComboBoxItem>
@@ -45,7 +45,7 @@
                 <Button Margin="10" Content="Submit" FontSize="16" Padding="10 0"/>
             </StackPanel>
 
-            <ListView x:Name="listViewReportOne" Margin="50 0 50 50" FontSize="18" Grid.Row="2">
+            <ListView x:Name="listViewMostPopularBooksReport" Margin="50 0 50 50" FontSize="18" Grid.Row="2">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Book ISBN" DisplayMemberBinding="{Binding BookISBN}"/>
