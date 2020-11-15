@@ -20,11 +20,11 @@ namespace Team7_LibraryApp
     /// </summary>
     public partial class Return : UserControl
     {
-        public Return()
+        public Return(MainWindow m)
         {
             InitializeComponent();
 
-
+            listViewReportOne.ItemsSource = m.dataRepo.GetAllActiveCheckouts();
 
         }
 
