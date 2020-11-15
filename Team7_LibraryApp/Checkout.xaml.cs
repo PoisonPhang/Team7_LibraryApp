@@ -16,23 +16,25 @@ using System.Windows.Shapes;
 namespace Team7_LibraryApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Checkout.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Checkout : UserControl
     {
-        public MainWindow()
+        public Checkout()
         {
             InitializeComponent();
         }
 
-        /// <summary>
-        /// To swap the screen
-        /// </summary>
-        /// <param name="element"></param>
-        public void SwapScreen(UIElement element)
+        private void buttonMainMenu_Click(object sender, RoutedEventArgs e)
         {
-            Container.Child = element;
+            var mainWindow = this.FindAncestor<MainWindow>();
+            mainWindow.SwapScreen(new MainMenu());
         }
 
+        private void buttonLogout_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = this.FindAncestor<MainWindow>();
+            mainWindow.SwapScreen(new LogIn());
+        }
     }
 }

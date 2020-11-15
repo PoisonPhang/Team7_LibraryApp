@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace Team7_LibraryApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ReturnConfirmation.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ReturnConfirmation : UserControl
     {
-        public MainWindow()
+        public ReturnConfirmation()
         {
             InitializeComponent();
         }
-
-        /// <summary>
-        /// To swap the screen
-        /// </summary>
-        /// <param name="element"></param>
-        public void SwapScreen(UIElement element)
-        {
-            Container.Child = element;
-        }
-
     }
 }

@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="Team7_LibraryApp.ReportTwo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Team7_LibraryApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1200">
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height= "70"/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/background.JPG"></ImageBrush>
+            </Grid.Background>
+
+            <DockPanel Grid.Row="0">
+                <DockPanel.Background>
+                    <SolidColorBrush Color="AliceBlue" Opacity="1"/>
+                </DockPanel.Background>
+                <Button x:Name="buttonMainMenu" VerticalAlignment="Center"  Content="Main Menu" Margin="10,0" FontSize="14" DockPanel.Dock="Left" Padding="10 0" Click="buttonMainMenu_Click"/>
+                <Button x:Name="buttonReports" VerticalAlignment="Center"  Content="Reports" Margin="10,0" FontSize="14" DockPanel.Dock="Left" Padding="10 0" Click="buttonReports_Click"/>
+                <Button x:Name="buttonLogout" VerticalAlignment="Center"  Content="Logout" Margin="10,0" FontSize="14" DockPanel.Dock="Right" Padding="10 0" HorizontalAlignment="Right" MaxWidth="100" Click="buttonLogout_Click" />
+            </DockPanel>
+
+            <StackPanel Grid.Row="1" MaxWidth="300" Margin="10" Orientation="Horizontal">
+                <ComboBox Margin="10" FontSize="16" MinWidth="200">
+                    <ComboBoxItem>Fiction</ComboBoxItem>
+                    <ComboBoxItem>Non-Fiction</ComboBoxItem>
+                    <ComboBoxItem>Mystery</ComboBoxItem>
+                    <ComboBoxItem>Romance</ComboBoxItem>
+                    <ComboBoxItem>History</ComboBoxItem>
+                    <ComboBoxItem>Biography</ComboBoxItem>
+                    <ComboBoxItem>Children</ComboBoxItem>
+                    <ComboBoxItem>Drama</ComboBoxItem>
+                    <ComboBoxItem>Science Fiction</ComboBoxItem>
+                    <ComboBoxItem>True Crime</ComboBoxItem>
+                    <ComboBoxItem>Young Adult</ComboBoxItem>
+                </ComboBox>
+                <Button Margin="10" Content="Submit" FontSize="16" Padding="10 0"/>
+            </StackPanel>
+
+            <ListView x:Name="listViewReportOne" Margin="50 0 50 50" FontSize="18" Grid.Row="2">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Book ISBN" DisplayMemberBinding="{Binding BookISBN}"/>
+                        <GridViewColumn Header="Book Title" DisplayMemberBinding="{Binding BookTitle}"/>
+                        <GridViewColumn Header="Book Author" DisplayMemberBinding="{Binding BookAuthor}"/>
+                        <GridViewColumn Header="Genre" DisplayMemberBinding="{Binding Genre}"/>
+                        <GridViewColumn Header="Rank" DisplayMemberBinding="{Binding Rank}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+
+
+        </Grid>
+</UserControl>
