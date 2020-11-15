@@ -23,6 +23,9 @@ namespace Team7_LibraryApp
         public Return()
         {
             InitializeComponent();
+
+
+
         }
 
         private void buttonMainMenu_Click(object sender, RoutedEventArgs e)
@@ -35,6 +38,54 @@ namespace Team7_LibraryApp
         {
             var mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new LogIn());
+        }
+
+        private void buttonSearch_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = this.FindAncestor<MainWindow>();
+            LibraryDataRepo repo = mainWindow.dataRepo;
+
+
+            if(uxSearchFunction.SelectedItem == null)
+            {
+
+            }
+
+            else if (uxSearchFunction.SelectedItem.ToString() == "Book ID")
+            {
+                int number;
+
+                bool result = Int32.TryParse(inputSearch.Text, out number);
+
+                if (result)
+                {
+                    listViewReportOne.ItemsSource = repo.GetBookCheckoutsByBookId(number);
+                }
+                
+
+            }
+            else if (uxSearchFunction.SelectedItem.ToString() == "User's Name")
+            {
+                listViewReportOne.ItemsSource = repo.GetBookCheckoutsByUsersName(inputSearch.Text);
+            }
+
+
+        }
+
+        private void buttonReturn_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = this.FindAncestor<MainWindow>();
+            LibraryDataRepo repo = mainWindow.dataRepo;
+
+            int ID;
+
+            bool result = Int32.TryParse(inputBookId.Text, out ID);
+
+            if (result)
+            {
+                repo.ReturnBook(ID, Location.loc);
+            }
+
         }
     }
 }
