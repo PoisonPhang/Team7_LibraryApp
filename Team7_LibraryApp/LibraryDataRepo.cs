@@ -128,7 +128,7 @@ namespace Team7_LibraryApp
         {
             GetAllActiveCheckouts d = new GetAllActiveCheckouts();
 
-            return executor.ExecuteReader();
+            return executor.ExecuteReader(d);
         }
     }
 }
