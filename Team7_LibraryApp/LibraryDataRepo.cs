@@ -40,7 +40,7 @@ namespace Team7_LibraryApp
             return executor.ExecuteNonQuery(d);
         }
 
-        public void CheckoutBook(int BookId, int UserId, string LocationId, string LibrarianId, string OutDate, string DueDate)
+        public void CheckoutBook(int BookId, int UserId, int LocationId, string LibrarianId, string OutDate, string DueDate)
         {
             CheckoutBookDelegate d = new CheckoutBookDelegate(BookId, UserId, LocationId, LibrarianId, OutDate, DueDate);
 
@@ -120,6 +120,13 @@ namespace Team7_LibraryApp
         public IReadOnlyList<LibraryRankReport> GetLibraryRankReports(string StartDate, string EndDate)
         {
             RankLibrariesDelegate d = new RankLibrariesDelegate(StartDate, EndDate);
+
+            return executor.ExecuteReader(d);
+        }
+
+        public IReadOnlyList<BookCheckout> GetAllActiveCheckouts()
+        {
+            GetAllActiveCheckouts d = new GetAllActiveCheckouts();
 
             return executor.ExecuteReader(d);
         }

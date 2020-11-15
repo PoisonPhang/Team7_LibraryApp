@@ -6,4 +6,4 @@ FROM T7Library.BookCopy BC
 INNER JOIN T7Library.Book B ON BC.ISBN = B.ISBN
 INNER JOIN T7Library.BookAuthor BA ON BC.ISBN = BA.ISBN
 INNER JOIN T7Library.[Location] L ON BC.LocationId = L.LocationId
-WHERE  BA.FirstName + ' ' + BA.LastName LIKE '%' + @AuthorPartial + '%';
+WHERE  BA.FirstName + ' ' + BA.LastName LIKE '%' + @AuthorPartial + '%'AND BC.IsCheckedOut = 0 AND BC.IsOutOfService = 0;

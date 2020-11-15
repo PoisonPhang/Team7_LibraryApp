@@ -34,12 +34,12 @@
             </StackPanel.Background>
 
             <Label FontSize="20" Margin="50 3 10 3">Search:</Label>
-            <TextBox MinWidth="250" FontSize="20" Margin="0 3 10 3"></TextBox>
-            <ComboBox Margin="40 3 0 3" FontSize="20" MinWidth="250">
+            <TextBox x:Name="inputSearch" MinWidth="250" FontSize="20" Margin="0 3 10 3"/>
+            <ComboBox x:Name="uxSearchFunction" Margin="40 3 0 3" FontSize="20" MinWidth="250">
                 <ComboBoxItem>User's Name</ComboBoxItem>
                 <ComboBoxItem>Book ID</ComboBoxItem>
             </ComboBox>
-            <Button Margin="40 5 50 5" MinWidth="200" Content="Search" FontSize="20" Padding="10 0"/>
+            <Button x:Name="buttonSearch" Margin="40 5 50 5" MinWidth="200" Content="Search" FontSize="20" Padding="10 0" Click="buttonSearch_Click"/>
         </StackPanel>
 
         <ListView x:Name="listViewReportOne" Margin="50 0 50 0" FontSize="18" Grid.Row="2">
@@ -65,8 +65,8 @@
             </StackPanel.Background>
 
             <Label FontSize="20" Margin="50 10 10 10">Book ID:</Label>
-            <TextBox MinWidth="250" FontSize="20" Margin="0 10 10 10"></TextBox>
-            <Button Margin="40 10 50 10" MinWidth="200" Content="Return" FontSize="20" Padding="10 0"/>
+            <TextBox x:Name="inputBookId" MinWidth="250" FontSize="20" Margin="0 10 10 10"></TextBox>
+            <Button x:Name="buttonReturn" Margin="40 10 50 10" MinWidth="200" Content="Return" FontSize="20" Padding="10 0" Click="buttonReturn_Click"/>
         </StackPanel>
     </Grid>
 </UserControl>

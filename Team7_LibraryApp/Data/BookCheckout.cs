@@ -14,7 +14,7 @@ namespace Team7_LibraryApp.Data
         public int UserId { get; }
         public string UserFirstName { get; }
         public string UserLastName { get; }
-        public string LocationId { get; }
+        public int LocationId { get; }
         public string LibrarianId { get; }
         public string OutDate { get; }
         public string DueDate { get; }
@@ -31,7 +31,7 @@ namespace Team7_LibraryApp.Data
             this.DueDate = DueDate;
         }
 
-        public BookCheckout(int BookId, int UserId, string LocationId, string LibrarianId, string OutDate, string DueDate)
+        public BookCheckout(int BookId, int UserId, int LocationId, string LibrarianId, string OutDate, string DueDate)
         {
             this.BookId = BookId;
             this.UserId = UserId;

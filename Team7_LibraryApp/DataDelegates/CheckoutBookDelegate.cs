@@ -13,12 +13,12 @@ namespace Team7_LibraryApp.DataDelegates
     {
         public readonly int BookId;
         public readonly int UserId;
-        public readonly string LocationId;
+        public readonly int LocationId;
         public readonly string LibrarianId;
         public readonly string OutDate;
         public readonly string DueDate;
 
-        public CheckoutBookDelegate(int BookId, int UserId, string LocationId, string LibrarianId, string OutDate, string DueDate) : base ("T7Library.CheckoutBook")
+        public CheckoutBookDelegate(int BookId, int UserId, int LocationId, string LibrarianId, string OutDate, string DueDate) : base ("T7Library.CheckoutBook")
         {
             this.BookId = BookId;
             this.UserId = UserId;
