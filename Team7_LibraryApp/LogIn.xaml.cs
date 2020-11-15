@@ -40,6 +40,8 @@ namespace Team7_LibraryApp
                 var mainWindow = this.FindAncestor<MainWindow>();
                 mainWindow.SwapScreen(new MainMenu());
 
+
+
             }
 
 
