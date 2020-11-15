@@ -14,7 +14,7 @@ GROUP BY B.ISBN, B.Title, BA.FirstName + ' ' + BA.LastName, GC.Genre
 ORDER BY RANK() OVER(ORDER BY COUNT(DISTINCT C.CheckoutId));
 END;
 
-IF @GenreCode <> 0
+IF @GenreCode <> 1
 BEGIN
 SELECT B.ISBN, B.Title, BA.FirstName + ' ' + BA.LastName AS BookAuthor, GC.Genre, RANK() OVER(ORDER BY COUNT(DISTINCT C.CheckoutId))
 FROM T7Library.Book B

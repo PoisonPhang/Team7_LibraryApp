@@ -82,11 +82,46 @@ namespace Team7_LibraryApp
             executor.ExecuteNonQuery(d);
         }
 
-        public void ReturnBook(int BookId, int LocationId)
+        public BookReturn ReturnBook(int BookId, int LocationId)
         {
             ReturnBookDelegate d = new ReturnBookDelegate(BookId, LocationId);
 
+            return executor.ExecuteReader(d);
+        }
+
+        public void AddLibrarian(string Username, string passwordHash, string FirstName, string LastName, string StartDate)
+        {
+            AddLibrarianDelegate d = new AddLibrarianDelegate(Username, passwordHash, FirstName, LastName, StartDate);
+
             executor.ExecuteNonQuery(d);
+        }
+
+        public IReadOnlyList<LateReport> GetOverDueCheckouts()
+        {
+            GetOverdueCheckoutsDelegate d = new GetOverdueCheckoutsDelegate();
+
+            return executor.ExecuteReader(d);
+        }
+
+        public IReadOnlyList<ThreeDaysLeftReport> GetThreeDaysLeft()
+        {
+            GetThreeDaysLeftDelegate d = new GetThreeDaysLeftDelegate();
+
+            return executor.ExecuteReader(d);
+        }
+
+        public IReadOnlyList<BookRankReport> GetBookRankReports(int GenreCode)
+        {
+            RankBooksDelegate d = new RankBooksDelegate(GenreCode);
+
+            return executor.ExecuteReader(d);
+        }
+
+        public IReadOnlyList<LibraryRankReport> GetLibraryRankReports()
+        {
+            RankLibrariesDelegate d = new RankLibrariesDelegate();
+
+            return executor.ExecuteReader(d);
         }
     }
 }
