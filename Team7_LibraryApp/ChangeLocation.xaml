@@ -35,7 +35,7 @@
             <Separator></Separator>
 
 
-            <ComboBox Margin="0 10 0 0" MaxWidth="400"  FontSize="20">
+            <ComboBox x:Name="comboBox" Margin="0 10 0 0" MaxWidth="400"  FontSize="20">
                 <ComboBoxItem>1) Beltsville</ComboBoxItem>
                 <ComboBoxItem>2) Champlin</ComboBoxItem>
                 <ComboBoxItem>3) Lawrence</ComboBoxItem>
@@ -50,7 +50,7 @@
             </ComboBox>
 
 
-            <Button x:Name="buttonChangeLocation" MaxWidth="400" FontSize="20" Content="Change" Margin="20" Padding="5" />
+            <Button x:Name="buttonChangeLocation" MaxWidth="400" FontSize="20" Content="Change" Margin="20" Padding="5" Click="buttonChangeLocation_Click"/>
         </StackPanel>
 
     </Grid>

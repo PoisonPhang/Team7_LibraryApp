@@ -42,5 +42,29 @@ namespace Team7_LibraryApp
             var mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new LogIn());
         }
+
+        private void buttonChangeLocation_Click(object sender, RoutedEventArgs e)
+        {
+
+            int location = comboBox.SelectedIndex + 1;
+
+            if (location > 0)
+            {
+                Location.loc = location;
+
+                MessageBox.Show("Location Changed to " + Location.loc);
+
+                var mainWindow = this.FindAncestor<MainWindow>();
+                mainWindow.SwapScreen(new ManageLibrary());
+
+
+
+            }
+
+            
+
+
+
+        }
     }
 }
