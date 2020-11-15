@@ -55,5 +55,13 @@ namespace Team7_LibraryApp
                 listViewReportOne.ItemsSource = repo.GetBookCopiesByAuthor(searchStringTextBox.Text);
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            mainWindow = this.FindAncestor<MainWindow>();
+            LibraryDataRepo repo = mainWindow.dataRepo;
+
+            repo.CheckoutBook(Int32.Parse(uxBookId.Text), Int32.Parse(uxUserId.Text), Location.loc, "lib", DateTime.Today.ToString(), DateTime.Today.AddDays(14).ToString());
+        }
     }
 }
