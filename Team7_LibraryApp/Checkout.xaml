@@ -34,18 +34,18 @@
             </StackPanel.Background>
 
             <Label FontSize="20" Margin="50 3 10 3">Search:</Label>
-            <TextBox MinWidth="250" FontSize="20" Margin="0 3 10 3"></TextBox>
-            <ComboBox Margin="40 3 0 3" FontSize="20" MinWidth="250">
+            <TextBox x:Name="searchStringTextBox" MinWidth="250" FontSize="20" Margin="0 3 10 3"></TextBox>
+            <ComboBox x:Name="uxSearchFunction" Margin="40 3 0 3" FontSize="20" MinWidth="250">
                 <ComboBoxItem>Title</ComboBoxItem>
                 <ComboBoxItem>Author</ComboBoxItem>
             </ComboBox>
-            <Button Margin="40 5 50 5" MinWidth="200" Content="Search" FontSize="20" Padding="10 0"/>
+            <Button Margin="40 5 50 5" MinWidth="200" Content="Search" FontSize="20" Padding="10 0" Click="Button_Click"/>
         </StackPanel>
 
         <ListView x:Name="listViewReportOne" Margin="50 0 50 0" FontSize="18" Grid.Row="2">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Book ID" DisplayMemberBinding="{Binding BookID}"/>
+                    <GridViewColumn Header="Book ID" DisplayMemberBinding="{Binding BookId}"/>
                     <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
                     <GridViewColumn Header="Author" DisplayMemberBinding="{Binding Author}"/>
                     <GridViewColumn Header="Location" DisplayMemberBinding="{Binding Location}"/>

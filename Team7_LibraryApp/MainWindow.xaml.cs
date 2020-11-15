@@ -20,9 +20,13 @@ namespace Team7_LibraryApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        public LibraryDataRepo dataRepo { get; }
+
         public MainWindow()
         {
             InitializeComponent();
+            dataRepo = new LibraryDataRepo();
+
         }
 
         /// <summary>

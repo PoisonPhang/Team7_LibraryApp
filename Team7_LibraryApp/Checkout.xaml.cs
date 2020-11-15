@@ -20,14 +20,17 @@ namespace Team7_LibraryApp
     /// </summary>
     public partial class Checkout : UserControl
     {
+        private MainWindow mainWindow;
+
         public Checkout()
         {
             InitializeComponent();
+            //LibraryDataRepo = mainWindow.dataRepo;
         }
 
         private void buttonMainMenu_Click(object sender, RoutedEventArgs e)
         {
-            var mainWindow = this.FindAncestor<MainWindow>();
+            mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new MainMenu());
         }
 
@@ -35,6 +38,22 @@ namespace Team7_LibraryApp
         {
             var mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new LogIn());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ComboBoxItem selectedFuntion = (ComboBoxItem)uxSearchFunction.SelectedItem;
+            mainWindow = this.FindAncestor<MainWindow>();
+            LibraryDataRepo repo = mainWindow.dataRepo;
+
+            if (selectedFuntion.Content.ToString() == "Title")
+            {
+                listViewReportOne.ItemsSource = repo.GetBookCopiesByTitle(searchStringTextBox.Text);
+            }
+            else if (selectedFuntion.Content.ToString() == "Author")
+            {
+                listViewReportOne.ItemsSource = repo.GetBookCopiesByAuthor(searchStringTextBox.Text);
+            }
         }
     }
 }
