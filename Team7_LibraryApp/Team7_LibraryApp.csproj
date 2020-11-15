@@ -8,12 +8,13 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Team7_LibraryApp</RootNamespace>
     <AssemblyName>Team7_LibraryApp</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -63,6 +64,31 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DataDelegates\AddBookCopyDelegate.cs" />
+    <Compile Include="DataDelegates\AddBookDelegate.cs" />
+    <Compile Include="DataDelegates\AddLibrarianDelegate.cs" />
+    <Compile Include="DataDelegates\AddUserDelegate.cs" />
+    <Compile Include="DataDelegates\CheckoutBookDelegate.cs" />
+    <Compile Include="DataDelegates\GetBookCopiesByAuthorDelegate.cs" />
+    <Compile Include="DataDelegates\GetBookCopiesByTitleDelegate.cs" />
+    <Compile Include="DataDelegates\GetCheckoutsByBookIdDelegate.cs" />
+    <Compile Include="DataDelegates\GetCheckoutsByUsersNameDelegate.cs" />
+    <Compile Include="DataDelegates\GetOverdueCheckoutsDelegate.cs" />
+    <Compile Include="DataDelegates\GetThreeDaysLeftDelegate.cs" />
+    <Compile Include="DataDelegates\MoveCopyDelegate.cs" />
+    <Compile Include="DataDelegates\RankBooksDelegate.cs" />
+    <Compile Include="DataDelegates\RankLibrariesDelegate.cs" />
+    <Compile Include="DataDelegates\ReturnBookDelegate.cs" />
+    <Compile Include="Data\Book.cs" />
+    <Compile Include="Data\BookCopy.cs" />
+    <Compile Include="Data\BookCheckout.cs" />
+    <Compile Include="Data\BookRankReport.cs" />
+    <Compile Include="Data\BookReturn.cs" />
+    <Compile Include="Data\LateReport.cs" />
+    <Compile Include="Data\LibraryRankReport.cs" />
+    <Compile Include="Data\ThreeDaysLeftReport.cs" />
+    <Compile Include="Data\User.cs" />
+    <Compile Include="LibraryDataRepo.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -94,5 +120,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{a5ac459d-6c0a-4d6e-ad65-ecb3e0fec3a7}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
