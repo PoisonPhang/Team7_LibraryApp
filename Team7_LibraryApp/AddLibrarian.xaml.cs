@@ -50,6 +50,24 @@ namespace Team7_LibraryApp
             {
                 MessageBox.Show("All fields are requried");
             }
+            else
+            {
+                var mainWindow = this.FindAncestor<MainWindow>();
+                LibraryDataRepo repo = mainWindow.dataRepo;
+
+                try
+                {
+                    repo.AddLibrarian(inputUsername.Text, inputPassword.Text, inputFirstName.Text, inputLastName.Text, DateTime.Today.ToString());
+                    String m = "Librarian Successfully Added!\n";
+                    mainWindow.SwapScreen(new MessageWindow(m));
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+            }
 
         }
     }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Team7_LibraryApp.Data;
 
 namespace Team7_LibraryApp
 {
@@ -41,6 +42,59 @@ namespace Team7_LibraryApp
         {
             var mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new LogIn());
+
+        }
+
+        private void buttonAddUser_Click(object sender, RoutedEventArgs e)
+        {
+
+            if(inputFirstName.Text.Trim() == string.Empty || inputLastName.Text.Trim() == string.Empty || inputEmail.Text.Trim() == string.Empty || inputStreet.Text.Trim() == string.Empty 
+                || inputUnit.Text.Trim() == string.Empty || inputZipCode.Text.Trim() == string.Empty || inputCityName.Text.Trim() == string.Empty || inputStateCode.Text.Trim() == string.Empty)
+            {
+
+                MessageBox.Show("All Fields Are Requried");
+
+            }
+            else
+            {
+
+                var mainWindow = this.FindAncestor<MainWindow>();
+
+                try
+                {
+
+
+                    int zipCode;
+
+                    bool success = Int32.TryParse(inputZipCode.Text.Trim(), out zipCode);
+
+                    if (success)
+                    {
+                        LibraryDataRepo repo = mainWindow.dataRepo;
+                        User u = repo.AddUser(inputFirstName.Text.Trim(), inputLastName.Text.Trim(), inputEmail.Text.Trim(), inputStreet.Text.Trim(), inputUnit.Text.Trim(), zipCode, inputCityName.Text.Trim(), inputStateCode.Text.Trim());
+                            
+                        string confirmation = u.FirstName + " added with a user Id of: " + u.UserId.ToString();
+
+                        mainWindow.SwapScreen(new MessageWindow(confirmation));
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Zipcode Must Be A Number");
+                    }
+
+
+
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+
+                }
+
+
+            }
 
         }
     }

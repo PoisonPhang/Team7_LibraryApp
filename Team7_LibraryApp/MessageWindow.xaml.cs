@@ -16,19 +16,21 @@ using System.Windows.Shapes;
 namespace Team7_LibraryApp
 {
     /// <summary>
-    /// Interaction logic for ChangeLocation.xaml
+    /// Interaction logic for MessageWindow.xaml
     /// </summary>
-    public partial class ChangeLocation : UserControl
+    public partial class MessageWindow : UserControl
     {
-        public ChangeLocation()
+        public MessageWindow(String message)
         {
             InitializeComponent();
+
+            textBlock.Text = message;
         }
 
-        private void buttonManageLibrary_Click(object sender, RoutedEventArgs e)
+        private void buttonOkay_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new ManageLibrary());
+            mainWindow.SwapScreen(new MainMenu());
         }
 
         private void buttonMainMenu_Click(object sender, RoutedEventArgs e)
@@ -41,23 +43,6 @@ namespace Team7_LibraryApp
         {
             var mainWindow = this.FindAncestor<MainWindow>();
             mainWindow.SwapScreen(new LogIn());
-        }
-
-        private void buttonChangeLocation_Click(object sender, RoutedEventArgs e)
-        {
-
-            int location = comboBox.SelectedIndex + 1;
-
-            if (location > 0)
-            {
-
-                Session.Location = location;
-
-                var mainWindow = this.FindAncestor<MainWindow>();
-                mainWindow.SwapScreen(new MessageWindow("Location Changed to #" + comboBox.Text));
-            }
-
-      
 
         }
     }

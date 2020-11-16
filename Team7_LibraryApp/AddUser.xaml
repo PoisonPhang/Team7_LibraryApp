@@ -75,7 +75,7 @@
             <Label Grid.Row="8" HorizontalAlignment="Right" Grid.Column="0" FontSize="20" VerticalAlignment="Center">State Code:</Label>
             <TextBox x:Name="inputStateCode" Grid.Row="8" Margin="10 0 40 0"  Grid.Column="1" MinHeight="30" VerticalAlignment="Center" FontSize="20"></TextBox>
 
-            <Button Grid.Row="9" Grid.Column="1" FontSize="24"  Margin="10 10 40 0">Add User</Button>
+            <Button x:Name="buttonAddUser" Grid.Row="9" Grid.Column="1" FontSize="24"  Margin="10 10 40 0" Click="buttonAddUser_Click">Add User</Button>
 
 
 
