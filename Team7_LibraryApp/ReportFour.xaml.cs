@@ -53,11 +53,23 @@ namespace Team7_LibraryApp
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e)
-        {     
-            string startDate = StartDate.SelectedDate.Value.ToString("yyyy-MM-dd");
-            string endDate = EndDate.SelectedDate.Value.ToString("yyyy-MM-dd");
+        {
+            try
+            {
 
-            listViewRankLibraryReport.ItemsSource = mainWindow.dataRepo.GetLibraryRankReports(startDate, endDate);
+
+                string startDate = StartDate.SelectedDate.Value.ToString("yyyy-MM-dd");
+                string endDate = EndDate.SelectedDate.Value.ToString("yyyy-MM-dd");
+
+
+                listViewRankLibraryReport.ItemsSource = mainWindow.dataRepo.GetLibraryRankReports(startDate, endDate);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
     }
 }

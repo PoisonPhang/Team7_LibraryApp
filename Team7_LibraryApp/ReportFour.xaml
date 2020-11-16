@@ -43,10 +43,10 @@
         <ListView x:Name="listViewRankLibraryReport" Margin="50 0 50 50" FontSize="18" Grid.Row="2">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Library Name" DisplayMemberBinding="{Binding LibraryName}"/>
-                    <GridViewColumn Header="Rank" DisplayMemberBinding="{Binding Rank}"/>
-                    <GridViewColumn Header="Number of Checkouts" DisplayMemberBinding="{Binding NumberOfCheckouts}"/>
-                    <GridViewColumn Header="Location ID" DisplayMemberBinding="{Binding LocationId}"/>
+                    <GridViewColumn Header="Library Name" DisplayMemberBinding="{Binding LocationId}"/>
+                    <GridViewColumn Header="Rank" DisplayMemberBinding="{Binding Location}"/>
+                    <GridViewColumn Header="Number of Checkouts" DisplayMemberBinding="{Binding Checkouts}"/>
+                    <GridViewColumn Header="Location ID" DisplayMemberBinding="{Binding Rank}"/>
 
                 </GridView>
             </ListView.View>

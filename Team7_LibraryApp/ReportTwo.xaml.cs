@@ -57,8 +57,16 @@ namespace Team7_LibraryApp
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int genre = SelectGenre.SelectedIndex + 2;
-            listViewMostPopularBooksReport.ItemsSource = mainWindow.dataRepo.GetBookRankReports(genre);
+            try
+            {
+                int genre = SelectGenre.SelectedIndex + 2;
+                listViewMostPopularBooksReport.ItemsSource = mainWindow.dataRepo.GetBookRankReports(genre);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
     }
 }

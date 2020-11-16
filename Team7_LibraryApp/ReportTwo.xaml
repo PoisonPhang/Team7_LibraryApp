@@ -48,8 +48,8 @@
             <ListView x:Name="listViewMostPopularBooksReport" Margin="50 0 50 50" FontSize="18" Grid.Row="2">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Book ISBN" DisplayMemberBinding="{Binding BookISBN}"/>
-                        <GridViewColumn Header="Book Title" DisplayMemberBinding="{Binding BookTitle}"/>
+                        <GridViewColumn Header="Book ISBN" DisplayMemberBinding="{Binding ISBN}"/>
+                        <GridViewColumn Header="Book Title" DisplayMemberBinding="{Binding Title}"/>
                         <GridViewColumn Header="Book Author" DisplayMemberBinding="{Binding BookAuthor}"/>
                         <GridViewColumn Header="Genre" DisplayMemberBinding="{Binding Genre}"/>
                         <GridViewColumn Header="Rank" DisplayMemberBinding="{Binding Rank}"/>
