@@ -24,6 +24,7 @@
                 <SolidColorBrush Color="AliceBlue" Opacity="1"/>
             </DockPanel.Background>
             <Button x:Name="buttonMainMenu" VerticalAlignment="Center"  Content="Main Menu" Margin="10,0" FontSize="14" DockPanel.Dock="Left" Padding="10 0" Click="buttonMainMenu_Click"/>
+            <Label FontSize="14">Return Books</Label>
             <Button x:Name="buttonLogout" VerticalAlignment="Center"  Content="Logout" Margin="10,0" FontSize="14" DockPanel.Dock="Right" Padding="10 0" HorizontalAlignment="Right" MaxWidth="100" Click="buttonLogout_Click" />
         </DockPanel>
 
@@ -35,7 +36,7 @@
 
             <Label FontSize="20" Margin="50 3 10 3">Search:</Label>
             <TextBox x:Name="inputSearch" MinWidth="250" FontSize="20" Margin="0 3 10 3"/>
-            <ComboBox x:Name="uxSearchFunction" Margin="40 3 0 3" FontSize="20" MinWidth="250" SelectedIndex="0">
+            <ComboBox x:Name="uxSearchFunction" Margin="40 3 0 3" FontSize="20" MinWidth="250" SelectedIndex="1">
                 <ComboBoxItem>User's Name</ComboBoxItem>
                 <ComboBoxItem>Book ID</ComboBoxItem>
             </ComboBox>
@@ -49,8 +50,8 @@
                     <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
                     <GridViewColumn Header="Author" DisplayMemberBinding="{Binding Author}"/>
                     <GridViewColumn Header="USER ID" DisplayMemberBinding="{Binding UserId}"/>
-                    <GridViewColumn Header="User's Name" DisplayMemberBinding="{Binding UserFirstName}"/>
-                    <GridViewColumn Header="Checked Out Date" DisplayMemberBinding="{Binding OutDate}"/>
+                    <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding UserFirstName}"/>
+                    <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding UserLastName}"/>
                     <GridViewColumn Header="Due Date" DisplayMemberBinding="{Binding DueDate}"/>
 
                 </GridView>

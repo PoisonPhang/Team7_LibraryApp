@@ -73,7 +73,7 @@ namespace Team7_LibraryApp
                         LibraryDataRepo repo = mainWindow.dataRepo;
                         User u = repo.AddUser(inputFirstName.Text.Trim(), inputLastName.Text.Trim(), inputEmail.Text.Trim(), inputStreet.Text.Trim(), inputUnit.Text.Trim(), zipCode, inputCityName.Text.Trim(), inputStateCode.Text.Trim());
                             
-                        string confirmation = u.FirstName + " added with a user Id of: " + u.UserId.ToString();
+                        string confirmation = u.FirstName + " added with a User Id of: " + u.UserId.ToString();
 
                         mainWindow.SwapScreen(new MessageWindow(confirmation));
 

@@ -25,7 +25,9 @@
                 </DockPanel.Background>
                 <Button x:Name="buttonMainMenu" VerticalAlignment="Center"  Content="Main Menu" Margin="10,0" FontSize="14" DockPanel.Dock="Left" Padding="10 0" Click="buttonMainMenu_Click"/>
                 <Button x:Name="buttonReports" VerticalAlignment="Center"  Content="Reports" Margin="10,0" FontSize="14" DockPanel.Dock="Left" Padding="10 0" Click="buttonReports_Click"/>
-                <Button x:Name="buttonLogout" VerticalAlignment="Center"  Content="Logout" Margin="10,0" FontSize="14" DockPanel.Dock="Right" Padding="10 0" HorizontalAlignment="Right" MaxWidth="100" Click="buttonLogout_Click" />
+            <Label FontSize="14">Most Popular Books</Label>
+
+            <Button x:Name="buttonLogout" VerticalAlignment="Center"  Content="Logout" Margin="10,0" FontSize="14" DockPanel.Dock="Right" Padding="10 0" HorizontalAlignment="Right" MaxWidth="100" Click="buttonLogout_Click" />
             </DockPanel>
 
             <StackPanel Grid.Row="1" MaxWidth="300" Margin="10" Orientation="Horizontal">
