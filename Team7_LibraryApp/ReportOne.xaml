@@ -33,7 +33,7 @@
                     <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}"/>
                     <GridViewColumn Header="Book Title" DisplayMemberBinding="{Binding BookTitle}"/>
                     <GridViewColumn Header="Book Author" DisplayMemberBinding="{Binding BookAuthor}"/>
-                    <GridViewColumn Header="DueDate" DisplayMemberBinding="{Binding DueDate}"/>                    
+                    <GridViewColumn Header="Date Due" DisplayMemberBinding="{Binding DueDate}"/>                    
                 </GridView>
             </ListView.View>
         </ListView>
