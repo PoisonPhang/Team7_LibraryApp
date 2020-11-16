@@ -31,7 +31,7 @@ namespace Team7_LibraryApp.DataDelegates
 
             while (reader.Read())
             {
-                bookCheckouts.Add(new BookCheckout(reader.GetInt32("BookId"), reader.GetString("Title"), reader.GetString("Author"), reader.GetInt32("UserId"), reader.GetString("UserFirstName"), reader.GetString("UserLastName"), reader.GetDateTimeOffset("OutDate"), reader.GetDateTimeOffset("DueDate")));
+                bookCheckouts.Add(new BookCheckout(reader.GetInt32("BookId"), reader.GetString("Title"), reader.GetString("Author"), reader.GetInt32("UserId"), reader.GetString("UserFirstName"), reader.GetString("UserLastName"), reader.GetDateTime("OutDate"), reader.GetDateTime("DueDate")));
             }
 
             return bookCheckouts;

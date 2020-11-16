@@ -51,7 +51,12 @@ namespace DataAccess
             return GetValue(name, reader.GetDouble);
         }
 
-      public DateTime GetDateTimeOffset(string name)
+        public float GetFloat(string name)
+        {
+            return GetValue(name, reader.GetFloat);
+        }
+
+      public DateTime GetDateTime(string name)
       {
          return GetValue(name, reader.GetDateTime);
       }

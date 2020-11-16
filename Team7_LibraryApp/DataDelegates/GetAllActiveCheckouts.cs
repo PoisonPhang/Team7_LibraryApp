@@ -28,8 +28,8 @@ namespace Team7_LibraryApp.DataDelegates
                     reader.GetInt32("UserId"),
                     reader.GetString("UserFirstName"),
                     reader.GetString("UserLastName"),
-                    reader.GetDateTimeOffset("OutDate"), 
-                    reader.GetDateTimeOffset("DueDate")));
+                    reader.GetDateTime("OutDate"), 
+                    reader.GetDateTime("DueDate")));
             }
 
             return bookCheckouts;

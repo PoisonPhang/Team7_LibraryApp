@@ -27,7 +27,7 @@ namespace Team7_LibraryApp.DataDelegates
                     reader.GetString("Email"), 
                     reader.GetString("BookTitle"), 
                     reader.GetString("BookAuthor"), 
-                    reader.GetDateTimeOffset("DueDate")));
+                    reader.GetDateTime("DueDate")));
             }
 
             return threeDaysLeftReports;

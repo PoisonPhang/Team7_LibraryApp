@@ -18,6 +18,8 @@ BEGIN
 EXEC T7Library.MoveCopy @BookId = @BookId, @LocationId = @LocationId
 END;
 
+--DECLARE @BookId INT = 1;
+--DECLARE @RtrnDate DATE = SYSDATETIME();
 SELECT B.ISBN,
 	B.Title,
 	BA.FirstName + N' ' + BA.LastName AS Author,
@@ -28,13 +30,13 @@ SELECT B.ISBN,
 		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) > 0 THEN DATEDIFF(DAY, C.DueDate, @RtrnDate)
 	END AS DaysOverdue,
 	CASE
-		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) < 0 THEN 0
-		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) < 7 THEN 0.25
-		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) BETWEEN 7 AND 14 THEN 1.00
-		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) > 15 THEN 4.00
+		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) <= 0 THEN 0
+		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) < 7 THEN 1
+		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) BETWEEN 7 AND 14 THEN 2
+		WHEN DATEDIFF(DAY, C.DueDate, @RtrnDate) > 15 THEN 3
 	END AS PenaltyFee
 FROM T7Library.Checkout C
 INNER JOIN T7Library.BookCopy BC ON C.BookId = BC.BookId
 INNER JOIN T7Library.Book B ON BC.ISBN = B.ISBN
 INNER JOIN T7Library.BookAuthor BA ON B.ISBN = BA.ISBN
-WHERE DATEDIFF(DAY, C.DueDate, C.ReturnDate) > 0 AND C.BookId = @BookId AND C.ReturnDate = @RtrnDate;
+WHERE C.BookId = @BookId AND C.ReturnDate = @RtrnDate;

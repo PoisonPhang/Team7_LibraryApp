@@ -11,15 +11,17 @@ namespace Team7_LibraryApp.Data
         public string ISBN { get; }
         public string Title { get; }
         public string Author { get; }
+        public int UserId { get; }
         public string DueDate { get; }
         public int DaysOverdue { get; }
         public double PenaltyFee { get; }
 
-        public BookReturn(string ISBN, string Title, string Author, DateTime DueDate, int DaysOverdue, double PenaltyFee)
+        public BookReturn(string ISBN, string Title, string Author, int UserId, DateTime DueDate, int DaysOverdue, double PenaltyFee)
         {
             this.ISBN = ISBN;
             this.Title = Title;
             this.Author = Author;
+            this.UserId = UserId;
             this.DueDate = DueDate.ToString("mm/dd/yyyy");
             this.DaysOverdue = DaysOverdue;
             this.PenaltyFee = PenaltyFee;
