@@ -150,6 +150,6 @@ BEGIN
 			REFERENCES T7Library.Librarian,
 		OutDate DATE NOT NULL,
 		DueDate Date NOT NULL,
-		ReturnDate Date NOT NULL
+		ReturnDate Date
 	);
 END;

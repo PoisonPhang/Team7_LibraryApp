@@ -74,6 +74,7 @@
     <Compile Include="Checkout.xaml.cs">
       <DependentUpon>Checkout.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataDelegates\GetAllActiveCheckouts.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="ManageLibrary.xaml.cs">
       <DependentUpon>ManageLibrary.xaml</DependentUpon>

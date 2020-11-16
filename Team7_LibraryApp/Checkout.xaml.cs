@@ -61,7 +61,7 @@ namespace Team7_LibraryApp
             mainWindow = this.FindAncestor<MainWindow>();
             LibraryDataRepo repo = mainWindow.dataRepo;
 
-            repo.CheckoutBook(Int32.Parse(uxBookId.Text), Int32.Parse(uxUserId.Text), Location.loc, "lib", DateTime.Today.ToString(), DateTime.Today.AddDays(14).ToString());
+            repo.CheckoutBook(Int32.Parse(uxBookId.Text), Int32.Parse(uxUserId.Text), Location.loc, "ADavila", DateTime.Today.ToString(), DateTime.Today.AddDays(14).ToString());
         }
     }
 }
