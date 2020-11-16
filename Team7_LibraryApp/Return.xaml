@@ -45,13 +45,13 @@
         <ListView x:Name="listViewReportOne" Margin="50 0 50 0" FontSize="18" Grid.Row="2">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Book ID" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="Book ID" DisplayMemberBinding="{Binding BookId}"/>
                     <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
-                    <GridViewColumn Header="Author" DisplayMemberBinding="{Binding Title}"/>
-                    <GridViewColumn Header="USER ID" DisplayMemberBinding="{Binding Title}"/>
-                    <GridViewColumn Header="User's Name" DisplayMemberBinding="{Binding Title}"/>
-                    <GridViewColumn Header="Checked Out Date" DisplayMemberBinding="{Binding Title}"/>
-                    <GridViewColumn Header="Due Date" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="Author" DisplayMemberBinding="{Binding Author}"/>
+                    <GridViewColumn Header="USER ID" DisplayMemberBinding="{Binding UserId}"/>
+                    <GridViewColumn Header="User's Name" DisplayMemberBinding="{Binding UserFirstName}"/>
+                    <GridViewColumn Header="Checked Out Date" DisplayMemberBinding="{Binding OutDate}"/>
+                    <GridViewColumn Header="Due Date" DisplayMemberBinding="{Binding DueDate}"/>
 
                 </GridView>
             </ListView.View>

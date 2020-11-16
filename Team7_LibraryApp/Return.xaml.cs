@@ -25,7 +25,6 @@ namespace Team7_LibraryApp
             InitializeComponent();
 
             listViewReportOne.ItemsSource = m.dataRepo.GetAllActiveCheckouts();
-
         }
 
         private void buttonMainMenu_Click(object sender, RoutedEventArgs e)
