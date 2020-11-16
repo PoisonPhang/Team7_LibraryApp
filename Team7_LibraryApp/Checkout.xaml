@@ -42,7 +42,7 @@
             <Button Margin="40 5 50 5" MinWidth="200" Content="Search" FontSize="20" Padding="10 0" Click="Button_Click"/>
         </StackPanel>
 
-        <ListView x:Name="listViewReportOne" Margin="50 0 50 0" FontSize="18" Grid.Row="2">
+        <ListView x:Name="listViewReportOne" Margin="50 0 50 0" FontSize="18" Grid.Row="2" SelectionChanged="BookSelected">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Book ID" DisplayMemberBinding="{Binding BookId}"/>

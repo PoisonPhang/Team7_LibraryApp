@@ -11,9 +11,9 @@ namespace Team7_LibraryApp.Data
         public int LocationId { get; }
         public string Location { get; }
         public int Checkouts { get; }
-        public int Rank { get; }
+        public long Rank { get; }
 
-        public LibraryRankReport(int LocationId, string Location, int Checkouts, int Rank)
+        public LibraryRankReport(int LocationId, string Location, int Checkouts, long Rank)
         {
             this.LocationId = LocationId;
             this.Location = Location;

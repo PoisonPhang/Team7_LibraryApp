@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Team7_LibraryApp.Data;
 
 namespace Team7_LibraryApp
 {
@@ -62,6 +63,12 @@ namespace Team7_LibraryApp
             LibraryDataRepo repo = mainWindow.dataRepo;
 
             repo.CheckoutBook(Int32.Parse(uxBookId.Text), Int32.Parse(uxUserId.Text), Location.loc, "ADavila", DateTime.Today.ToString(), DateTime.Today.AddDays(14).ToString());
+        }
+
+        private void BookSelected(object sender, SelectionChangedEventArgs e)
+        {
+            BookCopy book = (BookCopy)listViewReportOne.SelectedItem;
+            uxBookId.Text = book.BookId.ToString();
         }
     }
 }

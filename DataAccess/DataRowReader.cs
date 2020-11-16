@@ -21,6 +21,11 @@ namespace DataAccess
          return reader.Read();
       }
 
+      public long GetBigInt(string name)
+      {
+            return GetValue(name, reader.GetInt64);
+      }
+
       public int GetInt32(string name)
       {
          return GetValue(name, reader.GetInt32);

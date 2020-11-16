@@ -30,7 +30,11 @@ namespace Team7_LibraryApp.DataDelegates
 
             while (reader.Read())
             {
-                bookRankReports.Add(new BookRankReport(reader.GetString("ISBN"), reader.GetString("Title"), reader.GetString("BookAuthor"), reader.GetString("Genre"), reader.GetInt32("Rank")));
+                bookRankReports.Add(new BookRankReport(reader.GetString("ISBN"), 
+                    reader.GetString("Title"), 
+                    reader.GetString("BookAuthor"), 
+                    reader.GetString("Genre"), 
+                    reader.GetBigInt("Rank")));
             }
 
             return bookRankReports;

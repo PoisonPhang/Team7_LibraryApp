@@ -7,6 +7,7 @@ namespace DataAccess
       bool Read();
       byte GetByte(string name);
       DateTime GetDateTimeOffset(string name);
+        long GetBigInt(string name);
       int GetInt32(string name);
 
       double GetDouble(string name);

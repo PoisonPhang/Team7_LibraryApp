@@ -33,7 +33,7 @@ namespace Team7_LibraryApp.DataDelegates
 
             while (reader.Read())
             {
-                libraryRankReports.Add(new LibraryRankReport(reader.GetInt32("LocationId"), reader.GetString("Location"), reader.GetInt32("Checkouts"), reader.GetInt32("Rank")));
+                libraryRankReports.Add(new LibraryRankReport(reader.GetInt32("LocationId"), reader.GetString("Location"), reader.GetInt32("Checkouts"), reader.GetBigInt("Rank")));
             }
 
             return libraryRankReports;
