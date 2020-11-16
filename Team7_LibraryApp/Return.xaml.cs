@@ -46,12 +46,14 @@ namespace Team7_LibraryApp
             LibraryDataRepo repo = mainWindow.dataRepo;
 
 
-            if(uxSearchFunction.SelectedItem == null)
+            if(inputSearch.Text.Trim() == string.Empty)
             {
+                listViewReportOne.ItemsSource = mainWindow.dataRepo.GetAllActiveCheckouts();
 
             }
 
-            else if (uxSearchFunction.SelectedItem.ToString() == "Book ID")
+
+            else if (uxSearchFunction.SelectedIndex == 1)
             {
                 int number;
 
@@ -64,9 +66,10 @@ namespace Team7_LibraryApp
                 
 
             }
-            else if (uxSearchFunction.SelectedItem.ToString() == "User's Name")
+            else if (uxSearchFunction.SelectedIndex == 0)
             {
                 listViewReportOne.ItemsSource = repo.GetBookCheckoutsByUsersName(inputSearch.Text);
+
             }
 
 
