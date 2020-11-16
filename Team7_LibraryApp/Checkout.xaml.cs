@@ -23,10 +23,11 @@ namespace Team7_LibraryApp
     {
         private MainWindow mainWindow;
 
-        public Checkout()
+        public Checkout(MainWindow m)
         {
             InitializeComponent();
             //LibraryDataRepo = mainWindow.dataRepo;
+            listViewReportOne.ItemsSource = m.dataRepo.GetBookCopiesByTitle(searchStringTextBox.Text);
         }
 
         private void buttonMainMenu_Click(object sender, RoutedEventArgs e)
@@ -68,9 +69,9 @@ namespace Team7_LibraryApp
 
                 repo.CheckoutBook(Int32.Parse(uxBookId.Text), Int32.Parse(uxUserId.Text), Session.Location, Session.LibrarianId, DateTime.Today.ToString(), DateTime.Today.AddDays(14).ToString());
 
-                String confirmation = "Book ID: " + uxBookId.Text + " Successfully Checked Out to User: " + uxUserId.Text +"\n\nIt will be due on " + DateTime.Today.AddDays(14).ToString();
+                String confirmation = "Book ID: " + uxBookId.Text + " Successfully Checked Out to User: " + uxUserId.Text +"\n\nDate Due: " + DateTime.Today.AddDays(14).ToString("yyyy-MM-dd");
 
-                mainWindow.SwapScreen(new CheckoutConfirmation(confirmation));
+                mainWindow.SwapScreen(new MessageWindow(confirmation));
 
             }
 

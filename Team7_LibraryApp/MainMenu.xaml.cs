@@ -46,7 +46,7 @@ namespace Team7_LibraryApp
         private void buttonCheckout_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = this.FindAncestor<MainWindow>();
-            mainWindow.SwapScreen(new Checkout());
+            mainWindow.SwapScreen(new Checkout(mainWindow));
         }
 
         private void buttonReturn_Click(object sender, RoutedEventArgs e)

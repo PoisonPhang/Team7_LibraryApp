@@ -88,7 +88,9 @@ namespace Team7_LibraryApp
                 {
                     BookReturn book = repo.ReturnBook(ID, Session.Location);
 
-                    mainWindow.SwapScreen(new ReturnConfirmation(book));
+                    string confirmation = book.Title + "\n\nSuccessfully Returned!";
+
+                    mainWindow.SwapScreen(new MessageWindow(confirmation));
                 }
                 catch
                 {
