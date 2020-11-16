@@ -19,7 +19,7 @@ namespace Team7_LibraryApp.Data
         public string OutDate { get; }
         public string DueDate { get; }
 
-        public BookCheckout(int BookId, string Title, string Author, int UserId, string UserFirstName, string UserLastName, string OutDate, string DueDate)
+        public BookCheckout(int BookId, string Title, string Author, int UserId, string UserFirstName, string UserLastName, DateTime OutDate, DateTime DueDate)
         {
             this.BookId = BookId;
             this.Title = Title;
@@ -27,8 +27,18 @@ namespace Team7_LibraryApp.Data
             this.UserId = UserId;
             this.UserFirstName = UserFirstName;
             this.UserLastName = UserLastName;
-            this.OutDate = OutDate;
-            this.DueDate = DueDate;
+            this.OutDate = OutDate.ToString("mm/dd/yyyy");
+            this.DueDate = DueDate.ToString("mm/dd/yyyy");
+        }
+
+        public BookCheckout(int BookId, int UserId, int LocationId, string LibrarianId, DateTime OutDate, DateTime DueDate)
+        {
+            this.BookId = BookId;
+            this.UserId = UserId;
+            this.LocationId = LocationId;
+            this.LibrarianId = LibrarianId;
+            this.OutDate = OutDate.ToString("mm/dd/yyyy");
+            this.DueDate = DueDate.ToString("mm/dd/yyyy");
         }
 
         public BookCheckout(int BookId, int UserId, int LocationId, string LibrarianId, string OutDate, string DueDate)

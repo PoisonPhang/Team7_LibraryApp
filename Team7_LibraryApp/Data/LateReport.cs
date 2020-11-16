@@ -18,7 +18,7 @@ namespace Team7_LibraryApp.Data
         public int DaysOverDue { get; }
         public double PenaltyFee { get; }
 
-        public LateReport(int UserId, string UserName, int BookId, string ISBN, string Title, string Author, string DueDate, int DaysOverDue, double PenaltyFee)
+        public LateReport(int UserId, string UserName, int BookId, string ISBN, string Title, string Author, DateTime DueDate, int DaysOverDue, double PenaltyFee)
         {
             this.UserId = UserId;
             this.UserName = UserName;
@@ -26,7 +26,7 @@ namespace Team7_LibraryApp.Data
             this.ISBN = ISBN;
             this.Title = Title;
             this.Author = Author;
-            this.DueDate = DueDate;
+            this.DueDate = DueDate.ToString("mm/dd/yyyy");
             this.DaysOverDue = DaysOverDue;
             this.PenaltyFee = PenaltyFee;
         }

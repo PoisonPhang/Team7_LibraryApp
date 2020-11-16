@@ -33,7 +33,7 @@ namespace Team7_LibraryApp.DataDelegates
             if (!reader.Read())
                 throw new RecordNotFoundException(BookId.ToString());
 
-            return new BookReturn(reader.GetString("ISBN"), reader.GetString("Title"), reader.GetString("Author"), reader.GetString("DueDate"), reader.GetInt32("DaysOverDue"), reader.GetValue<double>("PenaltyFee"));
+            return new BookReturn(reader.GetString("ISBN"), reader.GetString("Title"), reader.GetString("Author"), reader.GetDateTimeOffset("DueDate"), reader.GetInt32("DaysOverDue"), reader.GetDouble("PenaltyFee"));
         }
     }
 }

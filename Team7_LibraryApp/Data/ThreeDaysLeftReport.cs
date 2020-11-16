@@ -16,14 +16,14 @@ namespace Team7_LibraryApp.Data
         public string BookAuthor { get; }
         public string DueDate { get; }
 
-        public ThreeDaysLeftReport(string FirstName, string LastName, string Email, string BookTitle, string BookAuthor, string DueDate)
+        public ThreeDaysLeftReport(string FirstName, string LastName, string Email, string BookTitle, string BookAuthor, DateTime DueDate)
         {
             this.FirstName = FirstName;
             this.LastName = LastName;
             this.Email = Email;
             this.BookTitle = BookTitle;
             this.BookAuthor = BookAuthor;
-            this.DueDate = DueDate;
+            this.DueDate = DueDate.ToString("mm/dd/yyyy");
         }
     }
 }

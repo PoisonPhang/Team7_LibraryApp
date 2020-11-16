@@ -51,8 +51,8 @@ BEGIN
 		PasswordHash NVARCHAR(128) NOT NULL,
 		FirstName NVARCHAR(32) NOT NULL,
 		LastName NVARCHAR(32) NOT NULL,
-		StartDate DATE NOT NULL,
-		EndDate Date
+		StartDate DATETIME NOT NULL,
+		EndDate DATETIME
 	);
 END;
 
@@ -148,8 +148,8 @@ BEGIN
 			REFERENCES T7Library.[Location],
 		LibrarianId NVARCHAR(32) NOT NULL FOREIGN KEY
 			REFERENCES T7Library.Librarian,
-		OutDate DATE NOT NULL,
-		DueDate Date NOT NULL,
+		OutDate DATETIME NOT NULL,
+		DueDate DATETIME NOT NULL,
 		ReturnDate Date
 	);
 END;

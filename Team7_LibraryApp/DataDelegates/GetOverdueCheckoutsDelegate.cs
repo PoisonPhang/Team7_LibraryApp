@@ -28,9 +28,9 @@ namespace Team7_LibraryApp.DataDelegates
                     reader.GetString("ISBN"), 
                     reader.GetString("Title"), 
                     reader.GetString("Author"), 
-                    reader.GetString("DueDate"), 
+                    reader.GetDateTimeOffset("DueDate"), 
                     reader.GetInt32("DaysOverdue"), 
-                    reader.GetValue<double>("PenaltyFee")));
+                    reader.GetDouble("PenaltyFee")));
             }
 
             return lateReports;
