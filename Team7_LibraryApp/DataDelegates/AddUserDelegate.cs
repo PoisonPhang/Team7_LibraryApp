@@ -41,6 +41,7 @@ namespace Team7_LibraryApp.DataDelegates
             command.Parameters.AddWithValue("FirstName", FirstName);
             command.Parameters.AddWithValue("LastName", LastName);
             command.Parameters.AddWithValue("Email", Email);
+            command.Parameters.AddWithValue("Street", Street);
             command.Parameters.AddWithValue("Unit", Unit);
             command.Parameters.AddWithValue("ZipCode", ZipCode);
             command.Parameters.AddWithValue("CityName", CityName);
