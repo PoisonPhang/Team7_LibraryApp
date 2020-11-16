@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Team7_LibraryApp.Data;
 
 namespace Team7_LibraryApp
 {
@@ -83,8 +84,19 @@ namespace Team7_LibraryApp
             if (result)
             {
                 repo.ReturnBook(ID, Location.loc);
+
+                MessageBox.Show("Book Returned");
+
+                mainWindow.SwapScreen(new MainMenu());
+
             }
 
+        }
+
+        private void listViewReportOne_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            BookCheckout book = (BookCheckout)listViewReportOne.SelectedItem;
+            inputBookId.Text = book.BookId.ToString();
         }
     }
 }

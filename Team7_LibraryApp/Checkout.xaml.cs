@@ -62,7 +62,13 @@ namespace Team7_LibraryApp
             mainWindow = this.FindAncestor<MainWindow>();
             LibraryDataRepo repo = mainWindow.dataRepo;
 
-            repo.CheckoutBook(Int32.Parse(uxBookId.Text), Int32.Parse(uxUserId.Text), Location.loc, "ADavila", DateTime.Today.ToString(), DateTime.Today.AddDays(14).ToString());
+            repo.CheckoutBook(Int32.Parse(uxBookId.Text), Int32.Parse(uxUserId.Text), Location.loc, LibrarianId.Id, DateTime.Today.ToString(), DateTime.Today.AddDays(14).ToString());
+
+            MessageBox.Show("Book checked out");
+
+            mainWindow.SwapScreen(new MainMenu());
+
+
         }
 
         private void BookSelected(object sender, SelectionChangedEventArgs e)

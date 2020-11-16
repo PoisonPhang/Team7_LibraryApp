@@ -35,7 +35,7 @@
 
             <Label FontSize="20" Margin="50 3 10 3">Search:</Label>
             <TextBox x:Name="searchStringTextBox" MinWidth="250" FontSize="20" Margin="0 3 10 3"></TextBox>
-            <ComboBox x:Name="uxSearchFunction" Margin="40 3 0 3" FontSize="20" MinWidth="250">
+            <ComboBox x:Name="uxSearchFunction" Margin="40 3 0 3" FontSize="20" MinWidth="250" SelectedIndex="0">
                 <ComboBoxItem>Title</ComboBoxItem>
                 <ComboBoxItem>Author</ComboBoxItem>
             </ComboBox>

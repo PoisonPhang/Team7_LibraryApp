@@ -35,14 +35,14 @@
 
             <Label FontSize="20" Margin="50 3 10 3">Search:</Label>
             <TextBox x:Name="inputSearch" MinWidth="250" FontSize="20" Margin="0 3 10 3"/>
-            <ComboBox x:Name="uxSearchFunction" Margin="40 3 0 3" FontSize="20" MinWidth="250">
+            <ComboBox x:Name="uxSearchFunction" Margin="40 3 0 3" FontSize="20" MinWidth="250" SelectedIndex="0">
                 <ComboBoxItem>User's Name</ComboBoxItem>
                 <ComboBoxItem>Book ID</ComboBoxItem>
             </ComboBox>
             <Button x:Name="buttonSearch" Margin="40 5 50 5" MinWidth="200" Content="Search" FontSize="20" Padding="10 0" Click="buttonSearch_Click"/>
         </StackPanel>
 
-        <ListView x:Name="listViewReportOne" Margin="50 0 50 0" FontSize="18" Grid.Row="2">
+        <ListView x:Name="listViewReportOne" Margin="50 0 50 0" FontSize="18" Grid.Row="2" SelectionChanged="listViewReportOne_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Book ID" DisplayMemberBinding="{Binding BookId}"/>
