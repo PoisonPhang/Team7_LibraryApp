@@ -12,21 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Team7_LibraryApp.Data;
 
 namespace Team7_LibraryApp
 {
     /// <summary>
-    /// Interaction logic for ReturnConfirmation.xaml
+    /// Interaction logic for CheckoutConfirmation.xaml
     /// </summary>
-    public partial class ReturnConfirmation : UserControl
+    public partial class CheckoutConfirmation : UserControl
     {
-        public ReturnConfirmation(BookReturn book)
+        public CheckoutConfirmation(String confirmation)
         {
             InitializeComponent();
 
-            textBlock.Text = book.Title + "\n\nSuccessfully Returned.";
-
+            textBlock.Text = confirmation;
         }
 
         private void buttonOkay_Click(object sender, RoutedEventArgs e)

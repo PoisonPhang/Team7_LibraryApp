@@ -83,11 +83,18 @@ namespace Team7_LibraryApp
 
             if (result)
             {
-                repo.ReturnBook(ID, Location.loc);
 
-                MessageBox.Show("Book Returned");
+                try
+                {
+                    BookReturn book = repo.ReturnBook(ID, Session.Location);
 
-                mainWindow.SwapScreen(new MainMenu());
+                    mainWindow.SwapScreen(new ReturnConfirmation(book));
+                }
+                catch
+                {
+
+                }
+
 
             }
 

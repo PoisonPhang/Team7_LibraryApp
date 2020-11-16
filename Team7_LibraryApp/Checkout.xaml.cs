@@ -59,14 +59,22 @@ namespace Team7_LibraryApp
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            mainWindow = this.FindAncestor<MainWindow>();
-            LibraryDataRepo repo = mainWindow.dataRepo;
 
-            repo.CheckoutBook(Int32.Parse(uxBookId.Text), Int32.Parse(uxUserId.Text), Location.loc, LibrarianId.Id, DateTime.Today.ToString(), DateTime.Today.AddDays(14).ToString());
+            if(uxUserId.Text != String.Empty && uxBookId.Text != String.Empty && !String.IsNullOrWhiteSpace(uxUserId.Text) && !String.IsNullOrWhiteSpace(uxUserId.Text))
+            {
 
-            MessageBox.Show("Book checked out");
+                mainWindow = this.FindAncestor<MainWindow>();
+                LibraryDataRepo repo = mainWindow.dataRepo;
 
-            mainWindow.SwapScreen(new MainMenu());
+                repo.CheckoutBook(Int32.Parse(uxBookId.Text), Int32.Parse(uxUserId.Text), Session.Location, Session.LibrarianId, DateTime.Today.ToString(), DateTime.Today.AddDays(14).ToString());
+
+                String confirmation = "Book ID: " + uxBookId.Text + " Successfully Checked Out to User: " + uxUserId.Text +"\n\nIt will be due on " + DateTime.Today.AddDays(14).ToString();
+
+                mainWindow.SwapScreen(new CheckoutConfirmation(confirmation));
+
+            }
+
+
 
 
         }

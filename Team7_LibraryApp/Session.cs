@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Team7_LibraryApp
 {
-    public static class Location
+    public static class Session
     {
 
-        public static int loc { get; set; } = 1;
+        public static int Location { get; set; } = 1;
+
+        public static string LibrarianId { get; set; } = "ADavila";
 
     }
 }

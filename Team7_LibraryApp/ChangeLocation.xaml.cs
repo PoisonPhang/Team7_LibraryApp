@@ -50,9 +50,9 @@ namespace Team7_LibraryApp
 
             if (location > 0)
             {
-                Location.loc = location;
+                Session.Location = location;
 
-                MessageBox.Show("Location Changed to " + Location.loc);
+                MessageBox.Show("Location Changed to " + Session.Location);
 
                 var mainWindow = this.FindAncestor<MainWindow>();
                 mainWindow.SwapScreen(new ManageLibrary());
