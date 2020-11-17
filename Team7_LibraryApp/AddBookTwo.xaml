@@ -66,19 +66,31 @@
             <TextBox x:Name="inputYear" Grid.Row="4" Margin="10 0 40 0"  Grid.Column="1" MinHeight="30" VerticalAlignment="Center" FontSize="20"></TextBox>
 
             <Label Grid.Row="5" HorizontalAlignment="Right" Grid.Column="0" FontSize="20" VerticalAlignment="Center">Genre:</Label>
-            <TextBox x:Name="inputGenre" Grid.Row="5" Margin="10 0 40 0"  Grid.Column="1" MinHeight="30" VerticalAlignment="Center" FontSize="20"></TextBox>
+            <ComboBox Grid.Row="5" Grid.Column="1" Name="inputGenre" Margin="10 0 40 0" FontSize="18"  MinHeight="30" VerticalAlignment="Center" >
+                <ComboBoxItem>Fiction</ComboBoxItem>
+                <ComboBoxItem>Non-Fiction</ComboBoxItem>
+                <ComboBoxItem>Mystery</ComboBoxItem>
+                <ComboBoxItem>Romance</ComboBoxItem>
+                <ComboBoxItem>History</ComboBoxItem>
+                <ComboBoxItem>Biography</ComboBoxItem>
+                <ComboBoxItem>Children</ComboBoxItem>
+                <ComboBoxItem>Drama</ComboBoxItem>
+                <ComboBoxItem>Science Fiction</ComboBoxItem>
+                <ComboBoxItem>True Crime</ComboBoxItem>
+                <ComboBoxItem>Young Adult</ComboBoxItem>
+            </ComboBox>
 
             <Label Margin="30 0 0 0" Grid.Row="6" HorizontalAlignment="Right" Grid.Column="0" FontSize="20" VerticalAlignment="Center">Author's First Name:</Label>
             <TextBox x:Name="inputAuthorFirstName" Grid.Row="6" Margin="10 0 40 0"  Grid.Column="1" MinHeight="30" VerticalAlignment="Center" FontSize="20"></TextBox>
 
-            <Label Grid.Row="7" HorizontalAlignment="Right" Grid.Column="0" FontSize="20" VerticalAlignment="Center">Author's Last Name:</Label>
+            <Label Margin="30 0 0 0" Grid.Row="7" HorizontalAlignment="Right" Grid.Column="0" FontSize="20" VerticalAlignment="Center">Author's Last Name:</Label>
             <TextBox x:Name="inputAuthorLastName" Grid.Row="7" Margin="10 0 40 0"  Grid.Column="1" MinHeight="30" VerticalAlignment="Center" FontSize="20"></TextBox>
 
             <Label Grid.Row="8" HorizontalAlignment="Right" Grid.Column="0" FontSize="20" VerticalAlignment="Center">Number of Copies:</Label>
             <TextBox x:Name="inputNumberOfCopies" Grid.Row="8" Margin="10 0 40 0"  Grid.Column="1" MinHeight="30" VerticalAlignment="Center" FontSize="20"></TextBox>
 
             <Label Grid.Row="9" HorizontalAlignment="Right" Grid.Column="0" FontSize="20" VerticalAlignment="Center">Location:</Label>
-            <ComboBox x:Name="inputComboBox" Grid.Row="9" Grid.Column="1" Margin="10 0 40 0" VerticalAlignment="Center" MinHeight="30" FontSize="18">
+            <ComboBox x:Name="inputLocation" Grid.Row="9" Grid.Column="1" Margin="10 0 40 0" VerticalAlignment="Center" MinHeight="30" FontSize="18">
                 <ComboBoxItem>1) Beltsville</ComboBoxItem>
                 <ComboBoxItem>2) Champlin</ComboBoxItem>
                 <ComboBoxItem>3) Lawrence</ComboBoxItem>
@@ -91,7 +103,7 @@
                 <ComboBoxItem>10) Raeford</ComboBoxItem>
 
             </ComboBox>
-            <Button Grid.Row="10" Grid.Column="1" FontSize="24"  Margin="10 10 40 0"> Add Book</Button>
+            <Button x:Name="buttonAddBook" Grid.Row="10" Grid.Column="1" FontSize="24"  Margin="10 10 40 0" Click="buttonAddBook_Click">Add Book</Button>
 
 
 

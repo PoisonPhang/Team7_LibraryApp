@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Team7_LibraryApp.Data;
 
 namespace Team7_LibraryApp
 {
@@ -54,21 +55,7 @@ namespace Team7_LibraryApp
 
                 var mainWindow = this.FindAncestor<MainWindow>();
 
-                Data.Book book = mainWindow.dataRepo.CheckForISBN(inputISBN.Text);
-
-                if(book == null)
-                {
-
-                    MessageBox.Show("Book is null");
-
-                }
-                else
-                {
-
-                    MessageBox.Show(book.Title);
-
-                }
-
+                Book book = mainWindow.dataRepo.CheckForISBN(inputISBN.Text);
 
                 mainWindow.SwapScreen(new AddBookTwo(book, inputISBN.Text));
 
