@@ -21,11 +21,18 @@ namespace Team7_LibraryApp
     /// </summary>
     public partial class AddBookTwo : UserControl
     {
+        bool addBook = false;
+
         public AddBookTwo(Book book, String isbn) 
         {
             InitializeComponent();
 
             populateScreen(book, isbn);
+
+            if(book == null)
+            {
+                addBook = true;
+            }
 
         }
 
@@ -182,9 +189,14 @@ namespace Team7_LibraryApp
 
                         var mainWindow = this.FindAncestor<MainWindow>();
 
-                        mainWindow.dataRepo.AddBook(inputISBN.Text, inputTitle.Text, GenreCode.ToString(), inputPublisher.Text, Year, inputAuthorFirstName.Text, inputAuthorLastName.Text);
+                        if (addBook)
+                        {
+                            mainWindow.dataRepo.AddBook(inputISBN.Text, inputTitle.Text, GenreCode.ToString(), inputPublisher.Text, Year, inputAuthorFirstName.Text, inputAuthorLastName.Text);
 
-                        for(int i = 0; i < numberCopies; i++)
+                        }
+
+
+                        for (int i = 0; i < numberCopies; i++)
                         {
                             mainWindow.dataRepo.AddBookCopy(inputISBN.Text, inputLocation.SelectedIndex + 1);
                         }
