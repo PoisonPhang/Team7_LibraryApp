@@ -61,5 +61,55 @@ namespace Team7_LibraryApp
       
 
         }
+
+
+        private string getLocationString(int id)
+        {
+            if (id == 1)
+            {
+                return "Beltsville";
+            }
+            else if (id == 2)
+            {
+                return "Champlin";
+            }
+            else if (id == 3)
+            {
+                return "Lawrence";
+            }
+            else if (id == 4)
+            {
+                return "Seattle";
+            }
+            else if (id == 5)
+            {
+                return "Clarkston";
+            }
+            else if (id == 6)
+            {
+                return "Perth Amboy";
+            }
+            else if (id == 7)
+            {
+                return "Syosset";
+            }
+            else if (id == 8)
+            {
+                return "Staunton";
+            }
+            else if (id == 9)
+            {
+                return "Manchester";
+            }
+            else if (id == 10)
+            {
+                return "Raeform";
+            }
+            else
+            {
+                return "";
+            }
+
+        }
     }
 }
