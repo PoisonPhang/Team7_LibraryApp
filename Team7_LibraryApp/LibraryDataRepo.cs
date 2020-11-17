@@ -19,9 +19,9 @@ namespace Team7_LibraryApp
             executor = new SqlCommandExecutor(connectionString);
         }
 
-        public void AddBook(string ISBN, string Title, int GenreCode, string Publisher, int Year, string AuthorFirstName, string AuthorLastName)
+        public void AddBook(string ISBN, string Title, string Genre, string Publisher, int Year, string AuthorFirstName, string AuthorLastName)
         {
-            AddBookDelegate d = new AddBookDelegate(ISBN, Title, GenreCode, Publisher, Year, AuthorFirstName, AuthorLastName);
+            AddBookDelegate d = new AddBookDelegate(ISBN, Title, Genre, Publisher, Year, AuthorFirstName, AuthorLastName);
 
             executor.ExecuteNonQuery(d);
         }
