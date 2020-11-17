@@ -182,7 +182,7 @@ namespace Team7_LibraryApp
 
                         var mainWindow = this.FindAncestor<MainWindow>();
 
-                        mainWindow.dataRepo.AddBook(inputISBN.Text, inputTitle.Text, GenreCode, inputPublisher.Text, Year, inputAuthorFirstName.Text, inputAuthorLastName.Text);
+                        mainWindow.dataRepo.AddBook(inputISBN.Text, inputTitle.Text, GenreCode.ToString(), inputPublisher.Text, Year, inputAuthorFirstName.Text, inputAuthorLastName.Text);
 
                         for(int i = 0; i < numberCopies; i++)
                         {
