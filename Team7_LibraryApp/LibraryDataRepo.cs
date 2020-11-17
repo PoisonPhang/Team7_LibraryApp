@@ -140,5 +140,17 @@ namespace Team7_LibraryApp
 
             return librarian.CheckPassword(password);
         }
+
+        /// <summary>
+        /// Will return a compleate Book object if the ISBN exist in the system, otherwise null will be returned
+        /// </summary>
+        /// <param name="ISBN">ISBN of book</param>
+        /// <returns>Book object or null</returns>
+        public Book CheckForISBN(string ISBN)
+        {
+            CheckISBNDelegate d = new CheckISBNDelegate(ISBN);
+
+            return executor.ExecuteReader(d);
+        }
     }
 }
