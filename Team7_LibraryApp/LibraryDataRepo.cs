@@ -130,5 +130,15 @@ namespace Team7_LibraryApp
 
             return executor.ExecuteReader(d);
         }
+
+        public bool ValidateLogin(string username, string password)
+        {
+            GetPasswordHashDelegate d = new GetPasswordHashDelegate(username);
+            Librarian librarian = executor.ExecuteReader(d);
+
+            if (librarian == null) return false;
+
+            return librarian.CheckPassword(password);
+        }
     }
 }

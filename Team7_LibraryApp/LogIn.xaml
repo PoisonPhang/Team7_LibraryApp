@@ -16,7 +16,7 @@
             <Label Content="Password:"/>
             <PasswordBox Name="textBoxPassword" FontSize="18"/>
 
-            <ComboBox Margin="0 10">
+            <ComboBox x:Name="uxLocationDropDown" Margin="0 10">
                 <ComboBoxItem>1) Beltsville</ComboBoxItem>
                 <ComboBoxItem>2) Champlin</ComboBoxItem>
                 <ComboBoxItem>3) Lawrence</ComboBoxItem>
