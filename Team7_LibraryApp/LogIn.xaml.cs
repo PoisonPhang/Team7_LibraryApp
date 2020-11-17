@@ -37,7 +37,7 @@ namespace Team7_LibraryApp
             else
             {
                 Session.LibrarianId = textBoxUsername.Text.Trim();
-                Session.Location = uxLocationDropDown.SelectedIndex;
+                Session.Location = uxLocationDropDown.SelectedIndex + 1;
                 mainWindow.SwapScreen(new MainMenu());
             }
 
