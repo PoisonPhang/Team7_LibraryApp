@@ -57,21 +57,21 @@ namespace Team7_LibraryApp
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
-
-        }
-
-        private void buttonSubmit_Click(object sender, RoutedEventArgs e)
-        {
             try
             {
-                int genre = SelectGenre.SelectedIndex+2;
+                int genre = SelectGenre.SelectedIndex + 2;
                 listViewMostPopularBooksReport.ItemsSource = mainWindow.dataRepo.GetBookRankReports(genre);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+
+        }
+
+        private void buttonSubmit_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
