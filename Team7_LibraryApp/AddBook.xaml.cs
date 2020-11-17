@@ -51,8 +51,28 @@ namespace Team7_LibraryApp
             }
             else
             {
+
                 var mainWindow = this.FindAncestor<MainWindow>();
-                mainWindow.SwapScreen(new AddBookTwo());
+
+                Data.Book book = mainWindow.dataRepo.CheckForISBN(inputISBN.Text);
+
+                if(book == null)
+                {
+
+                    MessageBox.Show("Book is null");
+
+                }
+                else
+                {
+
+                    MessageBox.Show(book.Title);
+
+                }
+
+
+                mainWindow.SwapScreen(new AddBookTwo(book, inputISBN.Text));
+
+
             }
         }
     }

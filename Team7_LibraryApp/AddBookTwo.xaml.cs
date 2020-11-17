@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Team7_LibraryApp.Data;
 
 namespace Team7_LibraryApp
 {
@@ -20,10 +21,54 @@ namespace Team7_LibraryApp
     /// </summary>
     public partial class AddBookTwo : UserControl
     {
-        public AddBookTwo()
+        public AddBookTwo(Book book, String isbn) 
         {
             InitializeComponent();
+
+            populateScreen(book, isbn);
+
         }
+
+        private void populateScreen(Book book, String isbn)
+        {
+
+
+            if (book != null)
+            {
+
+                inputTitle.Text = book.Title;
+                inputPublisher.Text = book.Publisher;
+                inputISBN.Text = book.ISBN;
+                inputYear.Text = book.Year.ToString();
+                inputGenre.Text = book.GenreCode.ToString();
+                //
+                //
+                inputComboBox.SelectedIndex = Session.Location;
+
+                inputTitle.IsEnabled = false;
+                inputPublisher.IsEnabled = false;
+                inputISBN.IsEnabled = false;
+                inputYear.IsEnabled = false;
+                inputGenre.IsEnabled = false;
+                inputAuthorFirstName.IsEnabled = false;
+                inputAuthorLastName.IsEnabled = false;
+
+
+
+
+
+            } else
+            {
+
+                inputISBN.Text = isbn;
+                inputISBN.IsEnabled = false;
+
+                inputComboBox.SelectedIndex = Session.Location - 1;
+
+            }
+
+        }
+
 
         #region Menu Buttons
 
