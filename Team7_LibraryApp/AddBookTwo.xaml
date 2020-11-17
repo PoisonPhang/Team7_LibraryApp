@@ -78,7 +78,7 @@
             <TextBox x:Name="inputNumberOfCopies" Grid.Row="8" Margin="10 0 40 0"  Grid.Column="1" MinHeight="30" VerticalAlignment="Center" FontSize="20"></TextBox>
 
             <Label Grid.Row="9" HorizontalAlignment="Right" Grid.Column="0" FontSize="20" VerticalAlignment="Center">Location:</Label>
-            <ComboBox Grid.Row="9" Grid.Column="1" Margin="10 0 40 0" VerticalAlignment="Center" MinHeight="30" FontSize="18">
+            <ComboBox x:Name="inputComboBox" Grid.Row="9" Grid.Column="1" Margin="10 0 40 0" VerticalAlignment="Center" MinHeight="30" FontSize="18">
                 <ComboBoxItem>1) Beltsville</ComboBoxItem>
                 <ComboBoxItem>2) Champlin</ComboBoxItem>
                 <ComboBoxItem>3) Lawrence</ComboBoxItem>
