@@ -13,8 +13,9 @@ namespace Team7_LibraryApp.Data
         public int GenreCode { get; }
         public string Publisher { get; }
         public int Year { get; }
-
         public string Author { get; }
+        public string AuthorFirstName { get; }
+        public string AuthorLastName { get; }
 
         public Book (string ISBN, string Title, int GenreCode, string Publisher, int Year)
         {
@@ -32,7 +33,12 @@ namespace Team7_LibraryApp.Data
             this.GenreCode = GenreCode;
             this.Publisher = Publisher;
             this.Year = Year;
-            this.Author = Author; 
+            this.Author = Author;
+
+            string[] authorNameParts = Author.Split(' ');
+
+            AuthorFirstName = authorNameParts[0];
+            AuthorLastName = authorNameParts[1];
         }
     }
 }
