@@ -16,7 +16,7 @@ END;
 
 IF @GenreCode <> 1
 BEGIN
-SELECT B.ISBN, B.Title, BA.FirstName + ' ' + BA.LastName AS BookAuthor, GC.Genre, RANK() OVER(ORDER BY COUNT(DISTINCT C.CheckoutId))
+SELECT B.ISBN, B.Title, BA.FirstName + ' ' + BA.LastName AS BookAuthor, GC.Genre, RANK() OVER(ORDER BY COUNT(DISTINCT C.CheckoutId)) AS [RANK]
 FROM T7Library.Book B
 INNER JOIN T7Library.BookAuthor BA ON B.ISBN = BA.ISBN
 INNER JOIN T7Library.GenreCode GC ON B.GenreCode = GC.Code
