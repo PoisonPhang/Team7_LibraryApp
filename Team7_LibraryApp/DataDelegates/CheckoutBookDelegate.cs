@@ -42,6 +42,8 @@ namespace Team7_LibraryApp.DataDelegates
 
         public override BookCheckout Translate(SqlCommand command, IDataRowReader reader)
         {
+            if (!reader.Read()) return null;
+
             return new BookCheckout(BookId, reader.GetString("Title"), reader.GetString("Author"), UserId, reader.GetString("UserFirstName"), reader.GetString("UserLastName"), reader.GetDateTime("OutDate"), reader.GetDateTime("DueDate"));
         }
     }

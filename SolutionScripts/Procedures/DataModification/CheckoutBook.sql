@@ -3,8 +3,8 @@ CREATE OR ALTER PROCEDURE T7Library.CheckoutBook
 	@UserId INT,
 	@LocationId INT,
 	@LibrarianId NVARCHAR(32),
-	@OutDate DATE,
-	@DueDate DATE
+	@OutDate DATETIME,
+	@DueDate DATETIME
 AS
 
 INSERT T7Library.Checkout(BookId, UserId, LocationId, LibrarianId, OutDate, DueDate)
@@ -20,4 +20,4 @@ INNER JOIN T7Library.BookCopy BC ON C.BookId = BC.BookId
 INNER JOIN T7Library.Book B ON BC.ISBN = B.ISBN
 INNER JOIN T7Library.BookAuthor BA ON B.ISBN = BA.ISBN
 INNER JOIN T7Library.[User] U ON C.UserId = U.UserId
-WHERE C.BookId = @BookId AND C.OutDate = @OutDate
+WHERE C.BookId = @BookId AND ReturnDate IS NULL;
