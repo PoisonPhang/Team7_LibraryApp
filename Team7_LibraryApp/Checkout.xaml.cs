@@ -67,9 +67,9 @@ namespace Team7_LibraryApp
                     mainWindow = this.FindAncestor<MainWindow>();
                     LibraryDataRepo repo = mainWindow.dataRepo;
 
-                    repo.CheckoutBook(Int32.Parse(uxBookId.Text), Int32.Parse(uxUserId.Text), Session.Location, Session.LibrarianId, DateTime.Today.ToString(), DateTime.Today.AddDays(14).ToString());
+                    BookCheckout book = repo.CheckoutBook(Int32.Parse(uxBookId.Text), Int32.Parse(uxUserId.Text), Session.Location, Session.LibrarianId, DateTime.Today.ToString(), DateTime.Today.AddDays(14).ToString());
 
-                    String confirmation = "Book ID: " + uxBookId.Text + " Successfully Checked Out to User: " + uxUserId.Text + "\n\nDate Due: " + DateTime.Today.AddDays(14).ToString("yyyy-MM-dd");
+                    String confirmation = book.Title + " Checked Out To " + book.UserFirstName + " " + book.UserLastName + "\n\nDate Due: " + DateTime.Today.AddDays(14).ToString("yyyy-MM-dd");
 
                     mainWindow.SwapScreen(new MessageWindow(confirmation));
 
