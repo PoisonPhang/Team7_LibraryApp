@@ -74,9 +74,6 @@
     <Compile Include="Checkout.xaml.cs">
       <DependentUpon>Checkout.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CheckoutConfirmation.xaml.cs">
-      <DependentUpon>CheckoutConfirmation.xaml</DependentUpon>
-    </Compile>
     <Compile Include="DataDelegates\GetAllActiveCheckouts.cs" />
     <Compile Include="DataDelegates\GetPasswordHashDelegate.cs" />
     <Compile Include="Data\Librarian.cs" />
@@ -104,9 +101,6 @@
     <Compile Include="Return.xaml.cs">
       <DependentUpon>Return.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ReturnConfirmation.xaml.cs">
-      <DependentUpon>ReturnConfirmation.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Session.cs" />
     <Page Include="AddBook.xaml">
       <SubType>Designer</SubType>
@@ -129,10 +123,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Checkout.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CheckoutConfirmation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -217,10 +207,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Return.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ReturnConfirmation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
