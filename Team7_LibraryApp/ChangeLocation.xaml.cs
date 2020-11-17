@@ -23,6 +23,7 @@ namespace Team7_LibraryApp
         public ChangeLocation()
         {
             InitializeComponent();
+            comboBox.SelectedIndex = Session.Location - 1;
         }
 
         private void buttonManageLibrary_Click(object sender, RoutedEventArgs e)
