@@ -16,8 +16,10 @@ namespace Team7_LibraryApp.DataDelegates
         public readonly int GenreCode;
         public readonly string Publisher;
         public readonly int Year;
+        public readonly string AuthorFirstName;
+        public readonly string AuthorLastName;
 
-        public AddBookDelegate(string ISBN, string Title, int GenreCode, string Publisher, int Year) : base ("T7Library.AddBook")
+        public AddBookDelegate(string ISBN, string Title, int GenreCode, string Publisher, int Year, string AuthorFirstName, string AuthorLastName) : base ("T7Library.AddBook")
         {
             this.ISBN = ISBN;
             this.Title = Title;
@@ -30,11 +32,13 @@ namespace Team7_LibraryApp.DataDelegates
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("ISBN", ISBN);
             command.Parameters.AddWithValue("Title", Title);
-            command.Parameters.AddWithValue("GenreCode", GenreCode);
             command.Parameters.AddWithValue("Publisher", Publisher);
+            command.Parameters.AddWithValue("ISBN", ISBN);
             command.Parameters.AddWithValue("Year", Year);
+            command.Parameters.AddWithValue("GenreCode", GenreCode);
+            command.Parameters.AddWithValue("AuthorFirstName", AuthorFirstName);
+            command.Parameters.AddWithValue("AuthorLastName", AuthorLastName);
         }
 
         public override Book Translate(SqlCommand command)

@@ -29,7 +29,7 @@ namespace Team7_LibraryApp.DataDelegates
         {
             if (!reader.Read()) return null;
 
-            return new Book(ISBN, reader.GetString("Title"), reader.GetInt32("GenreCode"), reader.GetString("Publisher"), reader.GetInt32("Year"));
+            return new Book(ISBN, reader.GetString("Title"), reader.GetInt32("GenreCode"), reader.GetString("Publisher"), reader.GetInt32("Year"), reader.GetString("Author"));
         }
     }
 }
