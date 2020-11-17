@@ -40,11 +40,11 @@ namespace Team7_LibraryApp
             return executor.ExecuteNonQuery(d);
         }
 
-        public void CheckoutBook(int BookId, int UserId, int LocationId, string LibrarianId, string OutDate, string DueDate)
+        public BookCheckout CheckoutBook(int BookId, int UserId, int LocationId, string LibrarianId, string OutDate, string DueDate)
         {
             CheckoutBookDelegate d = new CheckoutBookDelegate(BookId, UserId, LocationId, LibrarianId, OutDate, DueDate);
 
-            executor.ExecuteNonQuery(d);
+            return executor.ExecuteReader(d);
         }
 
         public IReadOnlyList<BookCopy> GetBookCopiesByAuthor(string AuthorPartial)

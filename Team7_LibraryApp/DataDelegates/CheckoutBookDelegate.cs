@@ -9,7 +9,7 @@ using Team7_LibraryApp.Data;
 
 namespace Team7_LibraryApp.DataDelegates
 {
-    public class CheckoutBookDelegate : NonQueryDataDelegate<BookCheckout>
+    public class CheckoutBookDelegate : DataReaderDelegate<BookCheckout>
     {
         public readonly int BookId;
         public readonly int UserId;
@@ -40,9 +40,9 @@ namespace Team7_LibraryApp.DataDelegates
             command.Parameters.AddWithValue("DueDate", DueDate);
         }
 
-        public override BookCheckout Translate(SqlCommand command)
+        public override BookCheckout Translate(SqlCommand command, IDataRowReader reader)
         {
-            return new BookCheckout(BookId, UserId, LocationId, LibrarianId, OutDate, DueDate);
+            return new BookCheckout(BookId, reader.GetString("Title"), reader.GetString("Author"), UserId, reader.GetString("UserFirstName"), reader.GetString("UserLastName"), reader.GetDateTime("OutDate"), reader.GetDateTime("DueDate"));
         }
     }
 }
