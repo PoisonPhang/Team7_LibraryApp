@@ -10,6 +10,7 @@ namespace Team7_LibraryApp.Data
     {
         public string ISBN { get; }
         public string Title { get; }
+        public string Genre{ get; }
         public int GenreCode { get; }
         public string Publisher { get; }
         public int Year { get; }
@@ -17,13 +18,28 @@ namespace Team7_LibraryApp.Data
         public string AuthorFirstName { get; }
         public string AuthorLastName { get; }
 
-        public Book (string ISBN, string Title, int GenreCode, string Publisher, int Year)
+        public Book (string ISBN, string Title, string Genre, string Publisher, int Year)
         {
             this.ISBN = ISBN;
             this.Title = Title;
-            this.GenreCode = GenreCode;
+            this.Genre = Genre;
             this.Publisher = Publisher;
             this.Year = Year;
+        }
+
+        public Book(string ISBN, string Title, string Genre, string Publisher, int Year, string Author)
+        {
+            this.ISBN = ISBN;
+            this.Title = Title;
+            this.Genre = Genre;
+            this.Publisher = Publisher;
+            this.Year = Year;
+            this.Author = Author;
+
+            string[] authorNameParts = Author.Split(' ');
+
+            AuthorFirstName = authorNameParts[0];
+            AuthorLastName = authorNameParts[1];
         }
 
         public Book(string ISBN, string Title, int GenreCode, string Publisher, int Year, string Author)

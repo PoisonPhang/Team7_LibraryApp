@@ -40,7 +40,7 @@ namespace Team7_LibraryApp
                 inputPublisher.Text = book.Publisher;
                 inputISBN.Text = book.ISBN;
                 inputYear.Text = book.Year.ToString();
-                inputGenre.Text = book.GenreCode.ToString();
+                inputGenre.Text = book.Genre;
                 //
                 //
                 inputComboBox.SelectedIndex = Session.Location;
