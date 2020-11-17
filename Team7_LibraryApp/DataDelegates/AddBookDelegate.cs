@@ -26,6 +26,8 @@ namespace Team7_LibraryApp.DataDelegates
             this.Genre = Genre;
             this.Publisher = Publisher;
             this.Year = Year;
+            this.AuthorFirstName = AuthorFirstName;
+            this.AuthorLastName = AuthorLastName;
         }
 
         public override void PrepareCommand(SqlCommand command)
