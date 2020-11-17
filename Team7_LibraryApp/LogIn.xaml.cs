@@ -27,21 +27,18 @@ namespace Team7_LibraryApp
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = this.FindAncestor<MainWindow>();
+            LibraryDataRepo dataRepo = mainWindow.dataRepo;
 
-            if(textBoxUsername.Text == "")
+            if (textBoxUsername.Text == "" || !dataRepo.ValidateLogin(textBoxUsername.Text.Trim(), textBoxPassword.Password.Trim()))
             {
-
-                labelWarning.Content = "Please enter a Username";
-
+                labelWarning.Content = "Please enter a valid Username/Password";
             }
             else
             {
-
-                var mainWindow = this.FindAncestor<MainWindow>();
+                Session.LibrarianId = textBoxUsername.Text.Trim();
+                Session.Location = uxLocationDropDown.SelectedIndex;
                 mainWindow.SwapScreen(new MainMenu());
-
-
-
             }
 
 

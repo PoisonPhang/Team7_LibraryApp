@@ -28,7 +28,7 @@ namespace Team7_LibraryApp.DataDelegates
         public override Librarian Translate(SqlCommand command, IDataRowReader reader)
         {
             if (!reader.Read())
-                throw new RecordNotFoundException(Username);
+                return null;
 
             return new Librarian(Username, reader.GetString("PasswordHash"));
         }
