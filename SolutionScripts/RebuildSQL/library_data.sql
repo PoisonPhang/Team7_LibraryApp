@@ -345,17 +345,17 @@ VALUES
 
 INSERT T7Library.[Location](StreetAddress, Unit, ZipCode, City, StateCode)
 VALUES
-    (N'W. Devonshire Drive', N'75', 20705, N'Beltsville', N'MD'),
-    (N'Acacia Rd.', N'7829', 55316, N'Champlin', N'MN'),
-    (N'Snake Hill St.', N'685', 01841, N'Lawrence', N'MA'),
-    (N'Evergreen Rd.', N'45', 98144, N'Seattle', N'WA'),
-    (N'Aspen Circle', N'543', 48348, N'Clarkston', N'MI'),
+    (N'W. Devonshire Drive', N'75', 20705, N'Beltsville', N'KS'),
+    (N'Acacia Rd.', N'7829', 55316, N'Champlin', N'KS'),
+    (N'Snake Hill St.', N'685', 01841, N'Lawrence', N'KS'),
+    (N'Evergreen Rd.', N'45', 98144, N'Seattle', N'KS'),
+    (N'Aspen Circle', N'543', 48348, N'Clarkston', N'KS'),
 
-    (N'Colonial Lane', N'11', 08861, N'Perth Amboy', N'NJ'),
-    (N'E. Elizabeth Ave.', N'9090', 11791, N'Syosset', N'NY'),
-    (N'Bay Meadows St.', N'710', 24401, N'Staunton', N'VA'),
-    (N'Nut Swamp Street', N'806', 08759, N'Manchester Township', N'NJ'),
-    (N'North Tallwood Street', N'103', 28376, N'Raeford', N'NC')
+    (N'Colonial Lane', N'11', 08861, N'Perth Amboy', N'KS'),
+    (N'E. Elizabeth Ave.', N'9090', 11791, N'Syosset', N'KS'),
+    (N'Bay Meadows St.', N'710', 24401, N'Staunton', N'KS'),
+    (N'Nut Swamp Street', N'806', 08759, N'Manchester Township', N'KS'),
+    (N'North Tallwood Street', N'103', 28376, N'Raeford', N'KS')
     ;
 
 
