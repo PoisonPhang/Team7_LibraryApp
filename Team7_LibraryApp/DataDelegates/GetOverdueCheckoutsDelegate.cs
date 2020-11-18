@@ -30,7 +30,7 @@ namespace Team7_LibraryApp.DataDelegates
                     reader.GetString("Author"), 
                     reader.GetDateTime("DueDate"), 
                     reader.GetInt32("DaysOverdue"), 
-                    reader.GetFloat("PenaltyFee")));
+                    reader.GetInt32("PenaltyFee")));
             }
 
             return lateReports;

@@ -29,8 +29,8 @@ namespace Team7_LibraryApp.Data
             this.UserId = UserId;
             this.UserFirstName = UserFirstName;
             this.UserLastName = UserLastName;
-            this.OutDate = OutDate.ToString("mm/dd/yyyy");
-            this.DueDate = DueDate.ToString("mm/dd/yyyy");
+            this.OutDate = OutDate.ToString("MM/dd/yyyy");
+            this.DueDate = DueDate.ToString("MM/dd/yyyy");
 
             string[] authorNameParts = Author.Split(' ');
 
@@ -44,8 +44,8 @@ namespace Team7_LibraryApp.Data
             this.UserId = UserId;
             this.LocationId = LocationId;
             this.LibrarianId = LibrarianId;
-            this.OutDate = OutDate.ToString("mm/dd/yyyy");
-            this.DueDate = DueDate.ToString("mm/dd/yyyy");
+            this.OutDate = OutDate.ToString("MM/dd/yyyy");
+            this.DueDate = DueDate.ToString("MM/dd/yyyy");
         }
 
         public BookCheckout(int BookId, int UserId, int LocationId, string LibrarianId, string OutDate, string DueDate)

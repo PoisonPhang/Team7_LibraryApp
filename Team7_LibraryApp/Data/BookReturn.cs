@@ -22,7 +22,7 @@ namespace Team7_LibraryApp.Data
             this.Title = Title;
             this.Author = Author;
             this.UserId = UserId;
-            this.DueDate = DueDate.ToString("mm/dd/yyyy");
+            this.DueDate = DueDate.ToString("MM/dd/yyyy");
             this.DaysOverdue = DaysOverdue;
             this.PenaltyFee = PenaltyFee;
         }

@@ -26,7 +26,7 @@ namespace Team7_LibraryApp.Data
             this.ISBN = ISBN;
             this.Title = Title;
             this.Author = Author;
-            this.DueDate = DueDate.ToString("mm/dd/yyyy");
+            this.DueDate = DueDate.ToString("MM/dd/yyyy");
             this.DaysOverDue = DaysOverDue;
             this.PenaltyFee = PenaltyFee;
         }

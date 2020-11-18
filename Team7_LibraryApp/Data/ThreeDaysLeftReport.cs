@@ -23,7 +23,7 @@ namespace Team7_LibraryApp.Data
             this.Email = Email;
             this.BookTitle = BookTitle;
             this.BookAuthor = BookAuthor;
-            this.DueDate = DueDate.ToString("mm/dd/yyyy");
+            this.DueDate = DueDate.ToString("MM/dd/yyyy");
         }
     }
 }
