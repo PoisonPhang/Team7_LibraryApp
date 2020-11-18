@@ -30,12 +30,17 @@
         <ListView x:Name="listViewOverdueReport" Margin="50 50 50 50" FontSize="18" Grid.Row="1">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Book ISBN" DisplayMemberBinding="{Binding BookISBN}"/>
-                    <GridViewColumn Header="Book Title" DisplayMemberBinding="{Binding BookTitle}"/>
-                    <GridViewColumn Header="Book Author" DisplayMemberBinding="{Binding BookAuthor}"/>
-                    <GridViewColumn Header="Due Date" DisplayMemberBinding="{Binding DueDate}"/>
-                    <GridViewColumn Header="Days Overdue" DisplayMemberBinding="{Binding DaysOverdue}"/>
-                    <GridViewColumn Header="Penalty" DisplayMemberBinding="{Binding Penalty}"/>
+                    <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding UserId}"/>
+                    <GridViewColumn Header="UserName" DisplayMemberBinding="{Binding UserName}"/>
+                    <GridViewColumn Header="BookId" DisplayMemberBinding="{Binding BookId}"/>
+                    <GridViewColumn Header="ISBN" DisplayMemberBinding="{Binding ISBN}"/>
+                    <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="Author" DisplayMemberBinding="{Binding Author}"/>
+                    <GridViewColumn Header="DueDate" DisplayMemberBinding="{Binding DueDate}"/>
+                    <GridViewColumn Header="DaysOverDue" DisplayMemberBinding="{Binding DaysOverDue}"/>
+                    <GridViewColumn Header="PenaltyFee" DisplayMemberBinding="{Binding PenaltyFee}"/>
+
+
                 </GridView>
             </ListView.View>
         </ListView>
