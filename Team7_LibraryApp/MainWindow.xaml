@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Library Management System" Height="800" Width="1200">
     <Border x:Name="Container">
-        <local:MainMenu/>
+        <local:LogIn/>
     </Border>
 
 </Window>
