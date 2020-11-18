@@ -30,7 +30,7 @@
                 <SolidColorBrush Color="AliceBlue" Opacity=".8"/>
             </StackPanel.Background>
 
-            <TextBlock x:Name="textBlock" FontSize="28" HorizontalAlignment="Center" Margin="20"></TextBlock>
+            <TextBlock x:Name="textBlock" FontSize="22" HorizontalAlignment="Center" Margin="20"></TextBlock>
             <Separator/>
             <Button x:Name="buttonOkay" Content="Okay" FontSize="28" MaxWidth="250" Margin="20" Click="buttonOkay_Click" />
 
